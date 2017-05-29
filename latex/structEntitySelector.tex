@@ -1,0 +1,51 @@
+\hypertarget{structEntitySelector}{}\section{Entity\+Selector Struct Reference}
+\label{structEntitySelector}\index{Entity\+Selector@{Entity\+Selector}}
+
+
+A selector for an entity in a G\+T\+FS feed.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+optional string \hyperlink{structEntitySelector_acbe496a1b62f72e17ef0c274a0c9ad5f}{agency\+\_\+id} = 1
+\begin{DoxyCompactList}\small\item\em The values of the fields should correspond to the appropriate fields in the G\+T\+FS feed. \end{DoxyCompactList}\item 
+optional string {\bfseries route\+\_\+id} = 2\hypertarget{structEntitySelector_af8ad6e85795c182d0f28758f3216518a}{}\label{structEntitySelector_af8ad6e85795c182d0f28758f3216518a}
+
+\item 
+optional int32 \hyperlink{structEntitySelector_a92edd149876ba43d4ca8e79e7080e5cd}{route\+\_\+type} = 3\hypertarget{structEntitySelector_a92edd149876ba43d4ca8e79e7080e5cd}{}\label{structEntitySelector_a92edd149876ba43d4ca8e79e7080e5cd}
+
+\begin{DoxyCompactList}\small\item\em corresponds to route\+\_\+type in G\+T\+FS. \end{DoxyCompactList}\item 
+optional \hyperlink{structTripDescriptor}{Trip\+Descriptor} {\bfseries trip} = 4\hypertarget{structEntitySelector_a06a0e81adbeba4a8f546a10649725e71}{}\label{structEntitySelector_a06a0e81adbeba4a8f546a10649725e71}
+
+\item 
+optional string {\bfseries stop\+\_\+id} = 5\hypertarget{structEntitySelector_ace89399c589145cf36fb611e1248005d}{}\label{structEntitySelector_ace89399c589145cf36fb611e1248005d}
+
+\item 
+extensions \hyperlink{structEntitySelector_a15a176a7bc347ec95f0ffbfa47ee2c47}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A selector for an entity in a G\+T\+FS feed. 
+
+\subsection{Member Data Documentation}
+\index{Entity\+Selector@{Entity\+Selector}!agency\+\_\+id@{agency\+\_\+id}}
+\index{agency\+\_\+id@{agency\+\_\+id}!Entity\+Selector@{Entity\+Selector}}
+\subsubsection[{\texorpdfstring{agency\+\_\+id}{agency_id}}]{\setlength{\rightskip}{0pt plus 5cm}optional string Entity\+Selector\+::agency\+\_\+id = 1}\hypertarget{structEntitySelector_acbe496a1b62f72e17ef0c274a0c9ad5f}{}\label{structEntitySelector_acbe496a1b62f72e17ef0c274a0c9ad5f}
+
+
+The values of the fields should correspond to the appropriate fields in the G\+T\+FS feed. 
+
+At least one specifier must be given. If several are given, then the matching has to apply to all the given specifiers. \index{Entity\+Selector@{Entity\+Selector}!to@{to}}
+\index{to@{to}!Entity\+Selector@{Entity\+Selector}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Entity\+Selector\+::to}\hypertarget{structEntitySelector_a15a176a7bc347ec95f0ffbfa47ee2c47}{}\label{structEntitySelector_a15a176a7bc347ec95f0ffbfa47ee2c47}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

@@ -1,0 +1,45 @@
+\hypertarget{structFeedMessage}{}\section{Feed\+Message Struct Reference}
+\label{structFeedMessage}\index{Feed\+Message@{Feed\+Message}}
+
+
+The contents of a feed message.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+required \hyperlink{structFeedHeader}{Feed\+Header} \hyperlink{structFeedMessage_a470995f7fb38ac3f064f413b9b920164}{header} = 1\hypertarget{structFeedMessage_a470995f7fb38ac3f064f413b9b920164}{}\label{structFeedMessage_a470995f7fb38ac3f064f413b9b920164}
+
+\begin{DoxyCompactList}\small\item\em Metadata about this feed and feed message. \end{DoxyCompactList}\item 
+repeated \hyperlink{structFeedEntity}{Feed\+Entity} \hyperlink{structFeedMessage_a2d509ce25e3dc54e3d6b7ecc2c17c842}{entity} = 2\hypertarget{structFeedMessage_a2d509ce25e3dc54e3d6b7ecc2c17c842}{}\label{structFeedMessage_a2d509ce25e3dc54e3d6b7ecc2c17c842}
+
+\begin{DoxyCompactList}\small\item\em Contents of the feed. \end{DoxyCompactList}\item 
+extensions \hyperlink{structFeedMessage_a0c9c34fa06eec947bf51cf8b8d1ee0df}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The contents of a feed message. 
+
+A feed is a continuous stream of feed messages. Each message in the stream is obtained as a response to an appropriate H\+T\+TP G\+ET request. A realtime feed is always defined with relation to an existing G\+T\+FS feed. All the entity ids are resolved with respect to the G\+T\+FS feed.
+
+A feed depends on some external configuration\+:
+\begin{DoxyItemize}
+\item The corresponding G\+T\+FS feed.
+\item Feed application (updates, positions or alerts). A feed should contain only items of one specified application; all the other entities will be ignored.
+\item Polling frequency 
+\end{DoxyItemize}
+
+\subsection{Member Data Documentation}
+\index{Feed\+Message@{Feed\+Message}!to@{to}}
+\index{to@{to}!Feed\+Message@{Feed\+Message}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Feed\+Message\+::to}\hypertarget{structFeedMessage_a0c9c34fa06eec947bf51cf8b8d1ee0df}{}\label{structFeedMessage_a0c9c34fa06eec947bf51cf8b8d1ee0df}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

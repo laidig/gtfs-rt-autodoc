@@ -1,0 +1,51 @@
+\hypertarget{structPosition}{}\section{Position Struct Reference}
+\label{structPosition}\index{Position@{Position}}
+
+
+A position.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+required float \hyperlink{structPosition_aee3ead66251dc2ad69ef681e3cacc452}{latitude} = 1\hypertarget{structPosition_aee3ead66251dc2ad69ef681e3cacc452}{}\label{structPosition_aee3ead66251dc2ad69ef681e3cacc452}
+
+\begin{DoxyCompactList}\small\item\em Degrees North, in the W\+G\+S-\/84 coordinate system. \end{DoxyCompactList}\item 
+required float \hyperlink{structPosition_aa7ff51d33d4a5f80c0aabf43a2e66f11}{longitude} = 2\hypertarget{structPosition_aa7ff51d33d4a5f80c0aabf43a2e66f11}{}\label{structPosition_aa7ff51d33d4a5f80c0aabf43a2e66f11}
+
+\begin{DoxyCompactList}\small\item\em Degrees East, in the W\+G\+S-\/84 coordinate system. \end{DoxyCompactList}\item 
+optional float \hyperlink{structPosition_add80884715080cf7a0f070820f9ca5a0}{bearing} = 3
+\begin{DoxyCompactList}\small\item\em Bearing, in degrees, clockwise from North, i.\+e., 0 is North and 90 is East. \end{DoxyCompactList}\item 
+optional double \hyperlink{structPosition_a6e5d7dc4b4fa9957deb07cb89370972d}{odometer} = 4\hypertarget{structPosition_a6e5d7dc4b4fa9957deb07cb89370972d}{}\label{structPosition_a6e5d7dc4b4fa9957deb07cb89370972d}
+
+\begin{DoxyCompactList}\small\item\em Odometer value, in meters. \end{DoxyCompactList}\item 
+optional float \hyperlink{structPosition_a7a7d9503a9f3cd15b28d4ee638770896}{speed} = 5\hypertarget{structPosition_a7a7d9503a9f3cd15b28d4ee638770896}{}\label{structPosition_a7a7d9503a9f3cd15b28d4ee638770896}
+
+\begin{DoxyCompactList}\small\item\em Momentary speed measured by the vehicle, in meters per second. \end{DoxyCompactList}\item 
+extensions \hyperlink{structPosition_a1399a54f196aed8449420c26acbbf123}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A position. 
+
+\subsection{Member Data Documentation}
+\index{Position@{Position}!bearing@{bearing}}
+\index{bearing@{bearing}!Position@{Position}}
+\subsubsection[{\texorpdfstring{bearing}{bearing}}]{\setlength{\rightskip}{0pt plus 5cm}optional float Position\+::bearing = 3}\hypertarget{structPosition_add80884715080cf7a0f070820f9ca5a0}{}\label{structPosition_add80884715080cf7a0f070820f9ca5a0}
+
+
+Bearing, in degrees, clockwise from North, i.\+e., 0 is North and 90 is East. 
+
+This can be the compass bearing, or the direction towards the next stop or intermediate location. This should not be direction deduced from the sequence of previous positions, which can be computed from previous data. \index{Position@{Position}!to@{to}}
+\index{to@{to}!Position@{Position}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Position\+::to}\hypertarget{structPosition_a1399a54f196aed8449420c26acbbf123}{}\label{structPosition_a1399a54f196aed8449420c26acbbf123}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

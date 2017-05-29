@@ -1,0 +1,50 @@
+\hypertarget{structTimeRange}{}\section{Time\+Range Struct Reference}
+\label{structTimeRange}\index{Time\+Range@{Time\+Range}}
+
+
+Low level data structures used above.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+optional uint64 \hyperlink{structTimeRange_a58a6afe3f10babe6dcbaf203fb83c26c}{start} = 1
+\begin{DoxyCompactList}\small\item\em Start time, in P\+O\+S\+IX time (i.\+e., number of seconds since January 1st 1970 00\+:00\+:00 U\+TC). \end{DoxyCompactList}\item 
+optional uint64 \hyperlink{structTimeRange_ada44c45a7e5419e7dbc7322f56002a32}{end} = 2
+\begin{DoxyCompactList}\small\item\em End time, in P\+O\+S\+IX time (i.\+e., number of seconds since January 1st 1970 00\+:00\+:00 U\+TC). \end{DoxyCompactList}\item 
+extensions \hyperlink{structTimeRange_ac6a65d679a5abc8bfaf635d9258e1ef6}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Low level data structures used above. 
+
+A time interval. The interval is considered active at time \textquotesingle{}t\textquotesingle{} if \textquotesingle{}t\textquotesingle{} is greater than or equal to the start time and less than the end time. 
+
+\subsection{Member Data Documentation}
+\index{Time\+Range@{Time\+Range}!end@{end}}
+\index{end@{end}!Time\+Range@{Time\+Range}}
+\subsubsection[{\texorpdfstring{end}{end}}]{\setlength{\rightskip}{0pt plus 5cm}optional uint64 Time\+Range\+::end = 2}\hypertarget{structTimeRange_ada44c45a7e5419e7dbc7322f56002a32}{}\label{structTimeRange_ada44c45a7e5419e7dbc7322f56002a32}
+
+
+End time, in P\+O\+S\+IX time (i.\+e., number of seconds since January 1st 1970 00\+:00\+:00 U\+TC). 
+
+If missing, the interval ends at plus infinity. \index{Time\+Range@{Time\+Range}!start@{start}}
+\index{start@{start}!Time\+Range@{Time\+Range}}
+\subsubsection[{\texorpdfstring{start}{start}}]{\setlength{\rightskip}{0pt plus 5cm}optional uint64 Time\+Range\+::start = 1}\hypertarget{structTimeRange_a58a6afe3f10babe6dcbaf203fb83c26c}{}\label{structTimeRange_a58a6afe3f10babe6dcbaf203fb83c26c}
+
+
+Start time, in P\+O\+S\+IX time (i.\+e., number of seconds since January 1st 1970 00\+:00\+:00 U\+TC). 
+
+If missing, the interval starts at minus infinity. \index{Time\+Range@{Time\+Range}!to@{to}}
+\index{to@{to}!Time\+Range@{Time\+Range}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Time\+Range\+::to}\hypertarget{structTimeRange_ac6a65d679a5abc8bfaf635d9258e1ef6}{}\label{structTimeRange_ac6a65d679a5abc8bfaf635d9258e1ef6}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

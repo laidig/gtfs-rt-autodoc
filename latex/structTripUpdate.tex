@@ -1,0 +1,107 @@
+\hypertarget{structTripUpdate}{}\section{Trip\+Update Struct Reference}
+\label{structTripUpdate}\index{Trip\+Update@{Trip\+Update}}
+
+
+Entities used in the feed.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTripUpdate_1_1StopTimeEvent}{Stop\+Time\+Event}
+\begin{DoxyCompactList}\small\item\em Timing information for a single predicted event (either arrival or departure). \end{DoxyCompactList}\item 
+struct \hyperlink{structTripUpdate_1_1StopTimeUpdate}{Stop\+Time\+Update}
+\begin{DoxyCompactList}\small\item\em Realtime update for arrival and/or departure events for a given stop on a trip. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+required \hyperlink{structTripDescriptor}{Trip\+Descriptor} \hyperlink{structTripUpdate_a4589512fcd9e14cae56c57a77f4b76fb}{trip} = 1
+\begin{DoxyCompactList}\small\item\em The Trip that this message applies to. \end{DoxyCompactList}\item 
+optional \hyperlink{structVehicleDescriptor}{Vehicle\+Descriptor} \hyperlink{structTripUpdate_a90b612e02be20f87c44e310a93b87d6e}{vehicle} = 3\hypertarget{structTripUpdate_a90b612e02be20f87c44e310a93b87d6e}{}\label{structTripUpdate_a90b612e02be20f87c44e310a93b87d6e}
+
+\begin{DoxyCompactList}\small\item\em Additional information on the vehicle that is serving this trip. \end{DoxyCompactList}\item 
+repeated \hyperlink{structTripUpdate_1_1StopTimeUpdate}{Stop\+Time\+Update} \hyperlink{structTripUpdate_a2bfd408c9bcb02945e07162f91cf012f}{stop\+\_\+time\+\_\+update} = 2
+\begin{DoxyCompactList}\small\item\em Updates to Stop\+Times for the trip (both future, i.\+e., predictions, and in some cases, past ones, i.\+e., those that already happened). \end{DoxyCompactList}\item 
+optional uint64 \hyperlink{structTripUpdate_a9c5a10025b4a68a78c3c0f0579186ea4}{timestamp} = 4
+\begin{DoxyCompactList}\small\item\em Moment at which the vehicle\textquotesingle{}s real-\/time progress was measured. \end{DoxyCompactList}\item 
+optional int32 \hyperlink{structTripUpdate_ad989dc481a35f7cdbf0bd640a33b67b6}{delay} = 5
+\begin{DoxyCompactList}\small\item\em The current schedule deviation for the trip. \end{DoxyCompactList}\item 
+extensions \hyperlink{structTripUpdate_a08a29e188c045d0e7c8030e093883f85}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Entities used in the feed. 
+
+Realtime update of the progress of a vehicle along a trip. Depending on the value of Schedule\+Relationship, a \hyperlink{structTripUpdate}{Trip\+Update} can specify\+:
+\begin{DoxyItemize}
+\item A trip that proceeds along the schedule.
+\item A trip that proceeds along a route but has no fixed schedule.
+\item A trip that have been added or removed with regard to schedule.
+\end{DoxyItemize}
+
+The updates can be for future, predicted arrival/departure events, or for past events that already occurred. Normally, updates should get more precise and more certain (see uncertainty below) as the events gets closer to current time. Even if that is not possible, the information for past events should be precise and certain. In particular, if an update points to time in the past but its update\textquotesingle{}s uncertainty is not 0, the client should conclude that the update is a (wrong) prediction and that the trip has not completed yet.
+
+Note that the update can describe a trip that is already completed. To this end, it is enough to provide an update for the last stop of the trip. If the time of that is in the past, the client will conclude from that that the whole trip is in the past (it is possible, although inconsequential, to also provide updates for preceding stops). This option is most relevant for a trip that has completed ahead of schedule, but according to the schedule, the trip is still proceeding at the current time. Removing the updates for this trip could make the client assume that the trip is still proceeding. Note that the feed provider is allowed, but not required, to purge past updates -\/ this is one case where this would be practically useful. 
+
+\subsection{Member Data Documentation}
+\index{Trip\+Update@{Trip\+Update}!delay@{delay}}
+\index{delay@{delay}!Trip\+Update@{Trip\+Update}}
+\subsubsection[{\texorpdfstring{delay}{delay}}]{\setlength{\rightskip}{0pt plus 5cm}optional int32 Trip\+Update\+::delay = 5}\hypertarget{structTripUpdate_ad989dc481a35f7cdbf0bd640a33b67b6}{}\label{structTripUpdate_ad989dc481a35f7cdbf0bd640a33b67b6}
+
+
+The current schedule deviation for the trip. 
+
+Delay should only be specified when the prediction is given relative to some existing schedule in G\+T\+FS.
+
+Delay (in seconds) can be positive (meaning that the vehicle is late) or negative (meaning that the vehicle is ahead of schedule). Delay of 0 means that the vehicle is exactly on time.
+
+Delay information in Stop\+Time\+Updates take precedent of trip-\/level delay information, such that trip-\/level delay is only propagated until the next stop along the trip with a \hyperlink{structTripUpdate_1_1StopTimeUpdate}{Stop\+Time\+Update} delay value specified.
+
+Feed providers are strongly encouraged to provide a \hyperlink{structTripUpdate_a9c5a10025b4a68a78c3c0f0579186ea4}{Trip\+Update.\+timestamp} value indicating when the delay value was last updated, in order to evaluate the freshness of the data.
+
+N\+O\+TE\+: This field is still experimental, and subject to change. It may be formally adopted in the future. \index{Trip\+Update@{Trip\+Update}!stop\+\_\+time\+\_\+update@{stop\+\_\+time\+\_\+update}}
+\index{stop\+\_\+time\+\_\+update@{stop\+\_\+time\+\_\+update}!Trip\+Update@{Trip\+Update}}
+\subsubsection[{\texorpdfstring{stop\+\_\+time\+\_\+update}{stop_time_update}}]{\setlength{\rightskip}{0pt plus 5cm}repeated {\bf Stop\+Time\+Update} Trip\+Update\+::stop\+\_\+time\+\_\+update = 2}\hypertarget{structTripUpdate_a2bfd408c9bcb02945e07162f91cf012f}{}\label{structTripUpdate_a2bfd408c9bcb02945e07162f91cf012f}
+
+
+Updates to Stop\+Times for the trip (both future, i.\+e., predictions, and in some cases, past ones, i.\+e., those that already happened). 
+
+The updates must be sorted by stop\+\_\+sequence, and apply for all the following stops of the trip up to the next specified one.
+
+Example 1\+: For a trip with 20 stops, a \hyperlink{structTripUpdate_1_1StopTimeUpdate}{Stop\+Time\+Update} with arrival delay and departure delay of 0 for stop\+\_\+sequence of the current stop means that the trip is exactly on time.
+
+Example 2\+: For the same trip instance, 3 Stop\+Time\+Updates are provided\+:
+\begin{DoxyItemize}
+\item delay of 5 min for stop\+\_\+sequence 3
+\item delay of 1 min for stop\+\_\+sequence 8
+\item delay of unspecified duration for stop\+\_\+sequence 10 This will be interpreted as\+:
+\item stop\+\_\+sequences 3,4,5,6,7 have delay of 5 min.
+\item stop\+\_\+sequences 8,9 have delay of 1 min.
+\item stop\+\_\+sequences 10,... have unknown delay. 
+\end{DoxyItemize}\index{Trip\+Update@{Trip\+Update}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Trip\+Update@{Trip\+Update}}
+\subsubsection[{\texorpdfstring{timestamp}{timestamp}}]{\setlength{\rightskip}{0pt plus 5cm}optional uint64 Trip\+Update\+::timestamp = 4}\hypertarget{structTripUpdate_a9c5a10025b4a68a78c3c0f0579186ea4}{}\label{structTripUpdate_a9c5a10025b4a68a78c3c0f0579186ea4}
+
+
+Moment at which the vehicle\textquotesingle{}s real-\/time progress was measured. 
+
+In P\+O\+S\+IX time (i.\+e., the number of seconds since January 1st 1970 00\+:00\+:00 U\+TC). \index{Trip\+Update@{Trip\+Update}!to@{to}}
+\index{to@{to}!Trip\+Update@{Trip\+Update}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Trip\+Update\+::to}\hypertarget{structTripUpdate_a08a29e188c045d0e7c8030e093883f85}{}\label{structTripUpdate_a08a29e188c045d0e7c8030e093883f85}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+\index{Trip\+Update@{Trip\+Update}!trip@{trip}}
+\index{trip@{trip}!Trip\+Update@{Trip\+Update}}
+\subsubsection[{\texorpdfstring{trip}{trip}}]{\setlength{\rightskip}{0pt plus 5cm}required {\bf Trip\+Descriptor} Trip\+Update\+::trip = 1}\hypertarget{structTripUpdate_a4589512fcd9e14cae56c57a77f4b76fb}{}\label{structTripUpdate_a4589512fcd9e14cae56c57a77f4b76fb}
+
+
+The Trip that this message applies to. 
+
+There can be at most one \hyperlink{structTripUpdate}{Trip\+Update} entity for each actual trip instance. If there is none, that means there is no prediction information available. It does {\itshape not} mean that the trip is progressing according to schedule. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

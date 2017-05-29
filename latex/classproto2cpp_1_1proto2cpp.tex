@@ -1,0 +1,181 @@
+\hypertarget{classproto2cpp_1_1proto2cpp}{}\section{proto2cpp.\+proto2cpp Class Reference}
+\label{classproto2cpp_1_1proto2cpp}\index{proto2cpp.\+proto2cpp@{proto2cpp.\+proto2cpp}}
+
+
+Class for converting Google Protocol Buffers .proto files into C++ style output to enable Doxygen usage.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classproto2cpp_1_1proto2cpp_abcf9a7abb1604b617e3801d4922b3dc9}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)\hypertarget{classproto2cpp_1_1proto2cpp_abcf9a7abb1604b617e3801d4922b3dc9}{}\label{classproto2cpp_1_1proto2cpp_abcf9a7abb1604b617e3801d4922b3dc9}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classproto2cpp_1_1proto2cpp_a2bcc7c327b92a76c52755c65ea109b03}{handle\+File} (self, file\+Name)
+\begin{DoxyCompactList}\small\item\em Handles a file. \end{DoxyCompactList}\item 
+def \hyperlink{classproto2cpp_1_1proto2cpp_a1046dd01a756585c624a8d6734dc40d7}{parse\+File} (self, input\+File)
+\begin{DoxyCompactList}\small\item\em Parser function. \end{DoxyCompactList}\item 
+def \hyperlink{classproto2cpp_1_1proto2cpp_af4e633c25a2a6c31a3a806c7caadfb8b}{log} (self, string)
+\begin{DoxyCompactList}\small\item\em Writes {\ttfamily string} to log file. \end{DoxyCompactList}\item 
+def \hyperlink{classproto2cpp_1_1proto2cpp_a570535cb2a7a699d673877fc5c8c905b}{log\+Error} (self, string)
+\begin{DoxyCompactList}\small\item\em Writes {\ttfamily string} to error log file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classproto2cpp_1_1proto2cpp_a06614bc26f0849809d3bf6b5092f8f9c}{log\+File}
+\begin{DoxyCompactList}\small\item\em Debug log file name. \end{DoxyCompactList}\item 
+\hyperlink{classproto2cpp_1_1proto2cpp_a6bcbded937d299e48e0fb03a1dce9709}{error\+Log\+File}
+\begin{DoxyCompactList}\small\item\em Error log file name. \end{DoxyCompactList}\item 
+\hyperlink{classproto2cpp_1_1proto2cpp_a56767af005e7589efa89611e979ebd34}{log\+Level}
+\begin{DoxyCompactList}\small\item\em Logging level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classproto2cpp_1_1proto2cpp_a85f1be79a05376f69b9a75c28ebdd29c}{log\+None} = 0
+\begin{DoxyCompactList}\small\item\em Logging level\+: do not log anything. \end{DoxyCompactList}\item 
+int \hyperlink{classproto2cpp_1_1proto2cpp_ad88c9b4f3034ecbebc9980aa0d0de616}{log\+Errors} = 1
+\begin{DoxyCompactList}\small\item\em Logging level\+: log errors only. \end{DoxyCompactList}\item 
+int \hyperlink{classproto2cpp_1_1proto2cpp_a0608421165933b9b58e98ac02bbc6141}{log\+All} = 2
+\begin{DoxyCompactList}\small\item\em Logging level\+: log everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for converting Google Protocol Buffers .proto files into C++ style output to enable Doxygen usage. 
+
+The C++ style output is printed into standard output.~\newline
+ There are three different logging levels for the class\+: 
+\begin{DoxyItemize}
+\item \hyperlink{classproto2cpp_1_1proto2cpp_a85f1be79a05376f69b9a75c28ebdd29c}{log\+None}\+: do not log anything 
+\item \hyperlink{classproto2cpp_1_1proto2cpp_ad88c9b4f3034ecbebc9980aa0d0de616}{log\+Errors}\+: log errors only 
+\item \hyperlink{classproto2cpp_1_1proto2cpp_a0608421165933b9b58e98ac02bbc6141}{log\+All}\+: log everything
+\end{DoxyItemize}Logging level is determined by {\ttfamily \hyperlink{classproto2cpp_1_1proto2cpp_a56767af005e7589efa89611e979ebd34}{log\+Level}}.~\newline
+ Error logs are written to file determined by {\ttfamily \hyperlink{classproto2cpp_1_1proto2cpp_a6bcbded937d299e48e0fb03a1dce9709}{error\+Log\+File}}.~\newline
+ Debug logs are written to file determined by {\ttfamily \hyperlink{classproto2cpp_1_1proto2cpp_a06614bc26f0849809d3bf6b5092f8f9c}{log\+File}}. 
+
+\subsection{Member Function Documentation}
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!handle\+File@{handle\+File}}
+\index{handle\+File@{handle\+File}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{handle\+File(self, file\+Name)}{handleFile(self, fileName)}}]{\setlength{\rightskip}{0pt plus 5cm}def proto2cpp.\+proto2cpp.\+handle\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{file\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classproto2cpp_1_1proto2cpp_a2bcc7c327b92a76c52755c65ea109b03}{}\label{classproto2cpp_1_1proto2cpp_a2bcc7c327b92a76c52755c65ea109b03}
+
+
+Handles a file. 
+
+If {\ttfamily file\+Name} has .proto suffix, it is processed through \hyperlink{classproto2cpp_1_1proto2cpp_a1046dd01a756585c624a8d6734dc40d7}{parse\+File()}. Otherwise it is printed to stdout as is except for file {\ttfamily proto2cpp.\+py} without path since it\textquotesingle{}s the script given to python for processing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the file to be handled. \\
+\hline
+\end{DoxyParams}
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!log@{log}}
+\index{log@{log}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{log(self, string)}{log(self, string)}}]{\setlength{\rightskip}{0pt plus 5cm}def proto2cpp.\+proto2cpp.\+log (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classproto2cpp_1_1proto2cpp_af4e633c25a2a6c31a3a806c7caadfb8b}{}\label{classproto2cpp_1_1proto2cpp_af4e633c25a2a6c31a3a806c7caadfb8b}
+
+
+Writes {\ttfamily string} to log file. 
+
+\hyperlink{classproto2cpp_1_1proto2cpp_a56767af005e7589efa89611e979ebd34}{log\+Level} must be \hyperlink{classproto2cpp_1_1proto2cpp_a0608421165933b9b58e98ac02bbc6141}{log\+All} or otherwise the logging is skipped.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & String to be written to log file. \\
+\hline
+\end{DoxyParams}
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!log\+Error@{log\+Error}}
+\index{log\+Error@{log\+Error}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{log\+Error(self, string)}{logError(self, string)}}]{\setlength{\rightskip}{0pt plus 5cm}def proto2cpp.\+proto2cpp.\+log\+Error (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classproto2cpp_1_1proto2cpp_a570535cb2a7a699d673877fc5c8c905b}{}\label{classproto2cpp_1_1proto2cpp_a570535cb2a7a699d673877fc5c8c905b}
+
+
+Writes {\ttfamily string} to error log file. 
+
+\hyperlink{classproto2cpp_1_1proto2cpp_a56767af005e7589efa89611e979ebd34}{log\+Level} must be \hyperlink{classproto2cpp_1_1proto2cpp_a570535cb2a7a699d673877fc5c8c905b}{log\+Error} or \hyperlink{classproto2cpp_1_1proto2cpp_a0608421165933b9b58e98ac02bbc6141}{log\+All} or otherwise the logging is skipped.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & String to be written to error log file. \\
+\hline
+\end{DoxyParams}
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!parse\+File@{parse\+File}}
+\index{parse\+File@{parse\+File}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{parse\+File(self, input\+File)}{parseFile(self, inputFile)}}]{\setlength{\rightskip}{0pt plus 5cm}def proto2cpp.\+proto2cpp.\+parse\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{input\+File}
+\end{DoxyParamCaption}
+)}\hypertarget{classproto2cpp_1_1proto2cpp_a1046dd01a756585c624a8d6734dc40d7}{}\label{classproto2cpp_1_1proto2cpp_a1046dd01a756585c624a8d6734dc40d7}
+
+
+Parser function. 
+
+The function takes a .proto file object as input parameter and modifies the contents into C++ style. The modified data is printed into standard output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Input file object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!error\+Log\+File@{error\+Log\+File}}
+\index{error\+Log\+File@{error\+Log\+File}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{error\+Log\+File}{errorLogFile}}]{\setlength{\rightskip}{0pt plus 5cm}proto2cpp.\+proto2cpp.\+error\+Log\+File}\hypertarget{classproto2cpp_1_1proto2cpp_a6bcbded937d299e48e0fb03a1dce9709}{}\label{classproto2cpp_1_1proto2cpp_a6bcbded937d299e48e0fb03a1dce9709}
+
+
+Error log file name. 
+
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!log\+All@{log\+All}}
+\index{log\+All@{log\+All}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{log\+All}{logAll}}]{\setlength{\rightskip}{0pt plus 5cm}int proto2cpp.\+proto2cpp.\+log\+All = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classproto2cpp_1_1proto2cpp_a0608421165933b9b58e98ac02bbc6141}{}\label{classproto2cpp_1_1proto2cpp_a0608421165933b9b58e98ac02bbc6141}
+
+
+Logging level\+: log everything. 
+
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!log\+Errors@{log\+Errors}}
+\index{log\+Errors@{log\+Errors}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{log\+Errors}{logErrors}}]{\setlength{\rightskip}{0pt plus 5cm}int proto2cpp.\+proto2cpp.\+log\+Errors = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classproto2cpp_1_1proto2cpp_ad88c9b4f3034ecbebc9980aa0d0de616}{}\label{classproto2cpp_1_1proto2cpp_ad88c9b4f3034ecbebc9980aa0d0de616}
+
+
+Logging level\+: log errors only. 
+
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!log\+File@{log\+File}}
+\index{log\+File@{log\+File}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{log\+File}{logFile}}]{\setlength{\rightskip}{0pt plus 5cm}proto2cpp.\+proto2cpp.\+log\+File}\hypertarget{classproto2cpp_1_1proto2cpp_a06614bc26f0849809d3bf6b5092f8f9c}{}\label{classproto2cpp_1_1proto2cpp_a06614bc26f0849809d3bf6b5092f8f9c}
+
+
+Debug log file name. 
+
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!log\+Level@{log\+Level}}
+\index{log\+Level@{log\+Level}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{log\+Level}{logLevel}}]{\setlength{\rightskip}{0pt plus 5cm}proto2cpp.\+proto2cpp.\+log\+Level}\hypertarget{classproto2cpp_1_1proto2cpp_a56767af005e7589efa89611e979ebd34}{}\label{classproto2cpp_1_1proto2cpp_a56767af005e7589efa89611e979ebd34}
+
+
+Logging level. 
+
+\index{proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}!log\+None@{log\+None}}
+\index{log\+None@{log\+None}!proto2cpp\+::proto2cpp@{proto2cpp\+::proto2cpp}}
+\subsubsection[{\texorpdfstring{log\+None}{logNone}}]{\setlength{\rightskip}{0pt plus 5cm}int proto2cpp.\+proto2cpp.\+log\+None = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classproto2cpp_1_1proto2cpp_a85f1be79a05376f69b9a75c28ebdd29c}{}\label{classproto2cpp_1_1proto2cpp_a85f1be79a05376f69b9a75c28ebdd29c}
+
+
+Logging level\+: do not log anything. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+proto2cpp.\+py\end{DoxyCompactItemize}

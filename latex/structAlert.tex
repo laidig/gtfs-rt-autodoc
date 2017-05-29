@@ -1,0 +1,132 @@
+\hypertarget{structAlert}{}\section{Alert Struct Reference}
+\label{structAlert}\index{Alert@{Alert}}
+
+
+An alert, indicating some sort of incident in the public transit network.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structAlert_a199c4ca00d947ef89a8523c495ad2d2f}{Cause} \{ \\*
+{\bfseries U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+A\+U\+SE} = 1, 
+\hyperlink{structAlert_a199c4ca00d947ef89a8523c495ad2d2fa301ef2cc38d1df284d2fe8f370a4c1a9}{O\+T\+H\+E\+R\+\_\+\+C\+A\+U\+SE} = 2, 
+{\bfseries T\+E\+C\+H\+N\+I\+C\+A\+L\+\_\+\+P\+R\+O\+B\+L\+EM} = 3, 
+\hyperlink{structAlert_a199c4ca00d947ef89a8523c495ad2d2facf63f18c599508648e1b6e026d024914}{S\+T\+R\+I\+KE} = 4, 
+\\*
+\hyperlink{structAlert_a199c4ca00d947ef89a8523c495ad2d2fa7a2833570b9073ac44d6f136943a22c1}{D\+E\+M\+O\+N\+S\+T\+R\+A\+T\+I\+ON} = 5, 
+{\bfseries A\+C\+C\+I\+D\+E\+NT} = 6, 
+{\bfseries H\+O\+L\+I\+D\+AY} = 7, 
+{\bfseries W\+E\+A\+T\+H\+ER} = 8, 
+\\*
+{\bfseries M\+A\+I\+N\+T\+E\+N\+A\+N\+CE} = 9, 
+{\bfseries C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON} = 10, 
+{\bfseries P\+O\+L\+I\+C\+E\+\_\+\+A\+C\+T\+I\+V\+I\+TY} = 11, 
+{\bfseries M\+E\+D\+I\+C\+A\+L\+\_\+\+E\+M\+E\+R\+G\+E\+N\+CY} = 12
+ \}\begin{DoxyCompactList}\small\item\em Cause of this alert. \end{DoxyCompactList}
+\item 
+enum \hyperlink{structAlert_a4378fb5cc59d723ec02ea80694678d98}{Effect} \{ \\*
+{\bfseries N\+O\+\_\+\+S\+E\+R\+V\+I\+CE} = 1, 
+{\bfseries R\+E\+D\+U\+C\+E\+D\+\_\+\+S\+E\+R\+V\+I\+CE} = 2, 
+\hyperlink{structAlert_a4378fb5cc59d723ec02ea80694678d98a4b00b4d3a9ad0ee08c9756933a985d50}{S\+I\+G\+N\+I\+F\+I\+C\+A\+N\+T\+\_\+\+D\+E\+L\+A\+YS} = 3, 
+{\bfseries D\+E\+T\+O\+UR} = 4, 
+\\*
+{\bfseries A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+S\+E\+R\+V\+I\+CE} = 5, 
+{\bfseries M\+O\+D\+I\+F\+I\+E\+D\+\_\+\+S\+E\+R\+V\+I\+CE} = 6, 
+{\bfseries O\+T\+H\+E\+R\+\_\+\+E\+F\+F\+E\+CT} = 7, 
+{\bfseries U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+F\+F\+E\+CT} = 8, 
+\\*
+{\bfseries S\+T\+O\+P\+\_\+\+M\+O\+V\+ED} = 9
+ \}\begin{DoxyCompactList}\small\item\em What is the effect of this problem on the affected entity. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+repeated \hyperlink{structTimeRange}{Time\+Range} \hyperlink{structAlert_aa51a558e2f4de6230d9c476330848f38}{active\+\_\+period} = 1
+\begin{DoxyCompactList}\small\item\em Time when the alert should be shown to the user. \end{DoxyCompactList}\item 
+repeated \hyperlink{structEntitySelector}{Entity\+Selector} \hyperlink{structAlert_a5d21a1ff3069fcba37def8fca209bf7e}{informed\+\_\+entity} = 5\hypertarget{structAlert_a5d21a1ff3069fcba37def8fca209bf7e}{}\label{structAlert_a5d21a1ff3069fcba37def8fca209bf7e}
+
+\begin{DoxyCompactList}\small\item\em Entities whose users we should notify of this alert. \end{DoxyCompactList}\item 
+optional \hyperlink{structAlert_a199c4ca00d947ef89a8523c495ad2d2f}{Cause} {\bfseries cause} = 6 \mbox{[}default = U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+A\+U\+SE\mbox{]}\hypertarget{structAlert_ad00227a478f594ce9801014aa882506f}{}\label{structAlert_ad00227a478f594ce9801014aa882506f}
+
+\item 
+optional \hyperlink{structAlert_a4378fb5cc59d723ec02ea80694678d98}{Effect} {\bfseries effect} = 7 \mbox{[}default = U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+F\+F\+E\+CT\mbox{]}\hypertarget{structAlert_a8ae535031c42426c7f81a258757bcfb0}{}\label{structAlert_a8ae535031c42426c7f81a258757bcfb0}
+
+\item 
+optional \hyperlink{structTranslatedString}{Translated\+String} \hyperlink{structAlert_a5c3df11dcce290fe3df880b205da700d}{url} = 8\hypertarget{structAlert_a5c3df11dcce290fe3df880b205da700d}{}\label{structAlert_a5c3df11dcce290fe3df880b205da700d}
+
+\begin{DoxyCompactList}\small\item\em The U\+RL which provides additional information about the alert. \end{DoxyCompactList}\item 
+optional \hyperlink{structTranslatedString}{Translated\+String} \hyperlink{structAlert_a285aca0882b36a6e6cb1c64cb9d8399c}{header\+\_\+text} = 10\hypertarget{structAlert_a285aca0882b36a6e6cb1c64cb9d8399c}{}\label{structAlert_a285aca0882b36a6e6cb1c64cb9d8399c}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structAlert}{Alert} header. Contains a short summary of the alert text as plain-\/text. \end{DoxyCompactList}\item 
+optional \hyperlink{structTranslatedString}{Translated\+String} \hyperlink{structAlert_ac75dc73c0e4fe3c3f8e1116e931ecde6}{description\+\_\+text} = 11
+\begin{DoxyCompactList}\small\item\em Full description for the alert as plain-\/text. \end{DoxyCompactList}\item 
+extensions \hyperlink{structAlert_ad23cbc49bf56755a6c2c9974a644bc72}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An alert, indicating some sort of incident in the public transit network. 
+
+\subsection{Member Enumeration Documentation}
+\index{Alert@{Alert}!Cause@{Cause}}
+\index{Cause@{Cause}!Alert@{Alert}}
+\subsubsection[{\texorpdfstring{Cause}{Cause}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Alert\+::\+Cause}}\hypertarget{structAlert_a199c4ca00d947ef89a8523c495ad2d2f}{}\label{structAlert_a199c4ca00d947ef89a8523c495ad2d2f}
+
+
+Cause of this alert. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\+T\+H\+E\+R\+\_\+\+C\+A\+U\+SE@{O\+T\+H\+E\+R\+\_\+\+C\+A\+U\+SE}!Alert@{Alert}}\index{Alert@{Alert}!O\+T\+H\+E\+R\+\_\+\+C\+A\+U\+SE@{O\+T\+H\+E\+R\+\_\+\+C\+A\+U\+SE}}\item[{\em 
+O\+T\+H\+E\+R\+\_\+\+C\+A\+U\+SE\hypertarget{structAlert_a199c4ca00d947ef89a8523c495ad2d2fa301ef2cc38d1df284d2fe8f370a4c1a9}{}\label{structAlert_a199c4ca00d947ef89a8523c495ad2d2fa301ef2cc38d1df284d2fe8f370a4c1a9}
+}]Not machine-\/representable. \index{S\+T\+R\+I\+KE@{S\+T\+R\+I\+KE}!Alert@{Alert}}\index{Alert@{Alert}!S\+T\+R\+I\+KE@{S\+T\+R\+I\+KE}}\item[{\em 
+S\+T\+R\+I\+KE\hypertarget{structAlert_a199c4ca00d947ef89a8523c495ad2d2facf63f18c599508648e1b6e026d024914}{}\label{structAlert_a199c4ca00d947ef89a8523c495ad2d2facf63f18c599508648e1b6e026d024914}
+}]Public transit agency employees stopped working. \index{D\+E\+M\+O\+N\+S\+T\+R\+A\+T\+I\+ON@{D\+E\+M\+O\+N\+S\+T\+R\+A\+T\+I\+ON}!Alert@{Alert}}\index{Alert@{Alert}!D\+E\+M\+O\+N\+S\+T\+R\+A\+T\+I\+ON@{D\+E\+M\+O\+N\+S\+T\+R\+A\+T\+I\+ON}}\item[{\em 
+D\+E\+M\+O\+N\+S\+T\+R\+A\+T\+I\+ON\hypertarget{structAlert_a199c4ca00d947ef89a8523c495ad2d2fa7a2833570b9073ac44d6f136943a22c1}{}\label{structAlert_a199c4ca00d947ef89a8523c495ad2d2fa7a2833570b9073ac44d6f136943a22c1}
+}]People are blocking the streets. \end{description}
+\end{Desc}
+\index{Alert@{Alert}!Effect@{Effect}}
+\index{Effect@{Effect}!Alert@{Alert}}
+\subsubsection[{\texorpdfstring{Effect}{Effect}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Alert\+::\+Effect}}\hypertarget{structAlert_a4378fb5cc59d723ec02ea80694678d98}{}\label{structAlert_a4378fb5cc59d723ec02ea80694678d98}
+
+
+What is the effect of this problem on the affected entity. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+I\+G\+N\+I\+F\+I\+C\+A\+N\+T\+\_\+\+D\+E\+L\+A\+YS@{S\+I\+G\+N\+I\+F\+I\+C\+A\+N\+T\+\_\+\+D\+E\+L\+A\+YS}!Alert@{Alert}}\index{Alert@{Alert}!S\+I\+G\+N\+I\+F\+I\+C\+A\+N\+T\+\_\+\+D\+E\+L\+A\+YS@{S\+I\+G\+N\+I\+F\+I\+C\+A\+N\+T\+\_\+\+D\+E\+L\+A\+YS}}\item[{\em 
+S\+I\+G\+N\+I\+F\+I\+C\+A\+N\+T\+\_\+\+D\+E\+L\+A\+YS\hypertarget{structAlert_a4378fb5cc59d723ec02ea80694678d98a4b00b4d3a9ad0ee08c9756933a985d50}{}\label{structAlert_a4378fb5cc59d723ec02ea80694678d98a4b00b4d3a9ad0ee08c9756933a985d50}
+}]We don\textquotesingle{}t care about I\+Nsignificant delays\+: they are hard to detect, have little impact on the user, and would clutter the results as they are too frequent. \end{description}
+\end{Desc}
+
+
+\subsection{Member Data Documentation}
+\index{Alert@{Alert}!active\+\_\+period@{active\+\_\+period}}
+\index{active\+\_\+period@{active\+\_\+period}!Alert@{Alert}}
+\subsubsection[{\texorpdfstring{active\+\_\+period}{active_period}}]{\setlength{\rightskip}{0pt plus 5cm}repeated {\bf Time\+Range} Alert\+::active\+\_\+period = 1}\hypertarget{structAlert_aa51a558e2f4de6230d9c476330848f38}{}\label{structAlert_aa51a558e2f4de6230d9c476330848f38}
+
+
+Time when the alert should be shown to the user. 
+
+If missing, the alert will be shown as long as it appears in the feed. If multiple ranges are given, the alert will be shown during all of them. \index{Alert@{Alert}!description\+\_\+text@{description\+\_\+text}}
+\index{description\+\_\+text@{description\+\_\+text}!Alert@{Alert}}
+\subsubsection[{\texorpdfstring{description\+\_\+text}{description_text}}]{\setlength{\rightskip}{0pt plus 5cm}optional {\bf Translated\+String} Alert\+::description\+\_\+text = 11}\hypertarget{structAlert_ac75dc73c0e4fe3c3f8e1116e931ecde6}{}\label{structAlert_ac75dc73c0e4fe3c3f8e1116e931ecde6}
+
+
+Full description for the alert as plain-\/text. 
+
+The information in the description should add to the information of the header. \index{Alert@{Alert}!to@{to}}
+\index{to@{to}!Alert@{Alert}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Alert\+::to}\hypertarget{structAlert_ad23cbc49bf56755a6c2c9974a644bc72}{}\label{structAlert_ad23cbc49bf56755a6c2c9974a644bc72}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

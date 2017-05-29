@@ -1,0 +1,89 @@
+\hypertarget{structTripUpdate_1_1StopTimeUpdate}{}\section{Trip\+Update\+:\+:Stop\+Time\+Update Struct Reference}
+\label{structTripUpdate_1_1StopTimeUpdate}\index{Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}}
+
+
+Realtime update for arrival and/or departure events for a given stop on a trip.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726}{Schedule\+Relationship} \{ \hyperlink{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726ad2bf6182562045f8d4494f2b90979475}{S\+C\+H\+E\+D\+U\+L\+ED} = 0, 
+\hyperlink{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726a7b42e54cedaee1689c090fddce6ffe3e}{S\+K\+I\+P\+P\+ED} = 1, 
+\hyperlink{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726a9c4ab18a54e2c8f3c235f0cdaa3382bc}{N\+O\+\_\+\+D\+A\+TA} = 2
+ \}\begin{DoxyCompactList}\small\item\em The relation between this Stop\+Time and the static schedule. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+optional uint32 \hyperlink{structTripUpdate_1_1StopTimeUpdate_a0d9f654ecd536657ee00b1c1cbe428aa}{stop\+\_\+sequence} = 1
+\begin{DoxyCompactList}\small\item\em The update is linked to a specific stop either through stop\+\_\+sequence or stop\+\_\+id, so one of the fields below must necessarily be set. \end{DoxyCompactList}\item 
+optional string \hyperlink{structTripUpdate_1_1StopTimeUpdate_a2e9f0d502733a40600e161ecc5ccb341}{stop\+\_\+id} = 4\hypertarget{structTripUpdate_1_1StopTimeUpdate_a2e9f0d502733a40600e161ecc5ccb341}{}\label{structTripUpdate_1_1StopTimeUpdate_a2e9f0d502733a40600e161ecc5ccb341}
+
+\begin{DoxyCompactList}\small\item\em Must be the same as in stops.\+txt in the corresponding G\+T\+FS feed. \end{DoxyCompactList}\item 
+optional \hyperlink{structTripUpdate_1_1StopTimeEvent}{Stop\+Time\+Event} {\bfseries arrival} = 2\hypertarget{structTripUpdate_1_1StopTimeUpdate_ad93d1fbf08d9aaa68cd88564d6f6f4f8}{}\label{structTripUpdate_1_1StopTimeUpdate_ad93d1fbf08d9aaa68cd88564d6f6f4f8}
+
+\item 
+optional \hyperlink{structTripUpdate_1_1StopTimeEvent}{Stop\+Time\+Event} {\bfseries departure} = 3\hypertarget{structTripUpdate_1_1StopTimeUpdate_a7442ac9c2bd4ba8b1752298ff983ea27}{}\label{structTripUpdate_1_1StopTimeUpdate_a7442ac9c2bd4ba8b1752298ff983ea27}
+
+\item 
+optional \hyperlink{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726}{Schedule\+Relationship} {\bfseries schedule\+\_\+relationship}
+\item 
+extensions \hyperlink{structTripUpdate_1_1StopTimeUpdate_ae4536522e5c97e4a800017600600a7dc}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Realtime update for arrival and/or departure events for a given stop on a trip. 
+
+Updates can be supplied for both past and future events. The producer is allowed, although not required, to drop past events. 
+
+\subsection{Member Enumeration Documentation}
+\index{Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}!Schedule\+Relationship@{Schedule\+Relationship}}
+\index{Schedule\+Relationship@{Schedule\+Relationship}!Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}}
+\subsubsection[{\texorpdfstring{Schedule\+Relationship}{ScheduleRelationship}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Trip\+Update\+::\+Stop\+Time\+Update\+::\+Schedule\+Relationship}}\hypertarget{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726}{}\label{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726}
+
+
+The relation between this Stop\+Time and the static schedule. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+C\+H\+E\+D\+U\+L\+ED@{S\+C\+H\+E\+D\+U\+L\+ED}!Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}}\index{Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}!S\+C\+H\+E\+D\+U\+L\+ED@{S\+C\+H\+E\+D\+U\+L\+ED}}\item[{\em 
+S\+C\+H\+E\+D\+U\+L\+ED\hypertarget{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726ad2bf6182562045f8d4494f2b90979475}{}\label{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726ad2bf6182562045f8d4494f2b90979475}
+}]The vehicle is proceeding in accordance with its static schedule of stops, although not necessarily according to the times of the schedule. At least one of arrival and departure must be provided. If the schedule for this stop contains both arrival and departure times then so must this update. \index{S\+K\+I\+P\+P\+ED@{S\+K\+I\+P\+P\+ED}!Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}}\index{Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}!S\+K\+I\+P\+P\+ED@{S\+K\+I\+P\+P\+ED}}\item[{\em 
+S\+K\+I\+P\+P\+ED\hypertarget{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726a7b42e54cedaee1689c090fddce6ffe3e}{}\label{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726a7b42e54cedaee1689c090fddce6ffe3e}
+}]The stop is skipped, i.\+e., the vehicle will not stop at this stop. Arrival and departure are optional. \index{N\+O\+\_\+\+D\+A\+TA@{N\+O\+\_\+\+D\+A\+TA}!Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}}\index{Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}!N\+O\+\_\+\+D\+A\+TA@{N\+O\+\_\+\+D\+A\+TA}}\item[{\em 
+N\+O\+\_\+\+D\+A\+TA\hypertarget{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726a9c4ab18a54e2c8f3c235f0cdaa3382bc}{}\label{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726a9c4ab18a54e2c8f3c235f0cdaa3382bc}
+}]No data is given for this stop. The main intention for this value is to give the predictions only for part of a trip, i.\+e., if the last update for a trip has a N\+O\+\_\+\+D\+A\+TA specifier, then Stop\+Times for the rest of the stops in the trip are considered to be unspecified as well. Neither arrival nor departure should be supplied. \end{description}
+\end{Desc}
+
+
+\subsection{Member Data Documentation}
+\index{Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}!schedule\+\_\+relationship@{schedule\+\_\+relationship}}
+\index{schedule\+\_\+relationship@{schedule\+\_\+relationship}!Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+relationship}{schedule_relationship}}]{\setlength{\rightskip}{0pt plus 5cm}optional {\bf Schedule\+Relationship} Trip\+Update\+::\+Stop\+Time\+Update\+::schedule\+\_\+relationship}\hypertarget{structTripUpdate_1_1StopTimeUpdate_a85a387be59e80b1f006d39096b96bfdc}{}\label{structTripUpdate_1_1StopTimeUpdate_a85a387be59e80b1f006d39096b96bfdc}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= 5
+        [\textcolor{keywordflow}{default} = \hyperlink{structTripUpdate_1_1StopTimeUpdate_a624ef1349bfc24a44984c33761070726ad2bf6182562045f8d4494f2b90979475}{SCHEDULED}]
+\end{DoxyCode}
+\index{Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}!stop\+\_\+sequence@{stop\+\_\+sequence}}
+\index{stop\+\_\+sequence@{stop\+\_\+sequence}!Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}}
+\subsubsection[{\texorpdfstring{stop\+\_\+sequence}{stop_sequence}}]{\setlength{\rightskip}{0pt plus 5cm}optional uint32 Trip\+Update\+::\+Stop\+Time\+Update\+::stop\+\_\+sequence = 1}\hypertarget{structTripUpdate_1_1StopTimeUpdate_a0d9f654ecd536657ee00b1c1cbe428aa}{}\label{structTripUpdate_1_1StopTimeUpdate_a0d9f654ecd536657ee00b1c1cbe428aa}
+
+
+The update is linked to a specific stop either through stop\+\_\+sequence or stop\+\_\+id, so one of the fields below must necessarily be set. 
+
+See the documentation in \hyperlink{structTripDescriptor}{Trip\+Descriptor} for more information. Must be the same as in stop\+\_\+times.\+txt in the corresponding G\+T\+FS feed. \index{Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}!to@{to}}
+\index{to@{to}!Trip\+Update\+::\+Stop\+Time\+Update@{Trip\+Update\+::\+Stop\+Time\+Update}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Trip\+Update\+::\+Stop\+Time\+Update\+::to}\hypertarget{structTripUpdate_1_1StopTimeUpdate_ae4536522e5c97e4a800017600600a7dc}{}\label{structTripUpdate_1_1StopTimeUpdate_ae4536522e5c97e4a800017600600a7dc}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

@@ -1,0 +1,84 @@
+\hypertarget{structSearchRequest}{}\section{Search\+Request Struct Reference}
+\label{structSearchRequest}\index{Search\+Request@{Search\+Request}}
+
+
+Test message.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7fa}{Corpus} \{ \\*
+\hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa346efe3e28f260dfbd38522f0d02da04}{U\+N\+I\+V\+E\+R\+S\+AL} = 0, 
+\hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa8ee2bd80198ce76eb38774e1d241c4d9}{W\+EB} = 1, 
+\hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa98ebe9413a727c7d0a45490531af9b49}{I\+M\+A\+G\+ES} = 2, 
+\hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faaf991e75914cde5f817233a2bce81762e}{L\+O\+C\+AL} = 3, 
+\\*
+\hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faad12f4dad36f02e174bf21d1a3fb09b12}{N\+E\+WS} = 4, 
+\hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa67ff9b068bf93241b70573d8f41187b9}{P\+R\+O\+D\+U\+C\+TS} = 5, 
+\hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faaeeefa4e6f9ffcb942dec5fc3b099b0d9}{V\+I\+D\+EO} = 6
+ \}\begin{DoxyCompactList}\small\item\em Corpus (type) of the search request. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+required string \hyperlink{structSearchRequest_a61b03a341342b2682ed562dc3a30e652}{query} = 1\hypertarget{structSearchRequest_a61b03a341342b2682ed562dc3a30e652}{}\label{structSearchRequest_a61b03a341342b2682ed562dc3a30e652}
+
+\begin{DoxyCompactList}\small\item\em Query string used in search request. \end{DoxyCompactList}\item 
+optional int32 \hyperlink{structSearchRequest_ad4b7d438eba45e2e9ace33c6cbee2969}{page\+\_\+number} = 2\hypertarget{structSearchRequest_ad4b7d438eba45e2e9ace33c6cbee2969}{}\label{structSearchRequest_ad4b7d438eba45e2e9ace33c6cbee2969}
+
+\begin{DoxyCompactList}\small\item\em Page number. \end{DoxyCompactList}\item 
+optional int32 \hyperlink{structSearchRequest_a40e02a2779af41f8bf5f7127665bd1a8}{result\+\_\+per\+\_\+page} = 3 \mbox{[}default = 10\mbox{]}
+\begin{DoxyCompactList}\small\item\em Number of results per page. \end{DoxyCompactList}\item 
+optional \hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7fa}{Corpus} \hyperlink{structSearchRequest_afca1e4b2da346600c363a3ebccb5b798}{corpus} = 4 \mbox{[}default = \hyperlink{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa346efe3e28f260dfbd38522f0d02da04}{U\+N\+I\+V\+E\+R\+S\+AL}\mbox{]}\hypertarget{structSearchRequest_afca1e4b2da346600c363a3ebccb5b798}{}\label{structSearchRequest_afca1e4b2da346600c363a3ebccb5b798}
+
+\begin{DoxyCompactList}\small\item\em Corpus (type) of the search. The default is \textquotesingle{}U\+N\+I\+V\+E\+R\+S\+AL\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test message. 
+
+This message sends a search request. 
+
+\subsection{Member Enumeration Documentation}
+\index{Search\+Request@{Search\+Request}!Corpus@{Corpus}}
+\index{Corpus@{Corpus}!Search\+Request@{Search\+Request}}
+\subsubsection[{\texorpdfstring{Corpus}{Corpus}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Search\+Request\+::\+Corpus}}\hypertarget{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7fa}{}\label{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7fa}
+
+
+Corpus (type) of the search request. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+N\+I\+V\+E\+R\+S\+AL@{U\+N\+I\+V\+E\+R\+S\+AL}!Search\+Request@{Search\+Request}}\index{Search\+Request@{Search\+Request}!U\+N\+I\+V\+E\+R\+S\+AL@{U\+N\+I\+V\+E\+R\+S\+AL}}\item[{\em 
+U\+N\+I\+V\+E\+R\+S\+AL\hypertarget{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa346efe3e28f260dfbd38522f0d02da04}{}\label{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa346efe3e28f260dfbd38522f0d02da04}
+}]Universal, i.\+e. typeless search. \index{W\+EB@{W\+EB}!Search\+Request@{Search\+Request}}\index{Search\+Request@{Search\+Request}!W\+EB@{W\+EB}}\item[{\em 
+W\+EB\hypertarget{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa8ee2bd80198ce76eb38774e1d241c4d9}{}\label{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa8ee2bd80198ce76eb38774e1d241c4d9}
+}]Web search. \index{I\+M\+A\+G\+ES@{I\+M\+A\+G\+ES}!Search\+Request@{Search\+Request}}\index{Search\+Request@{Search\+Request}!I\+M\+A\+G\+ES@{I\+M\+A\+G\+ES}}\item[{\em 
+I\+M\+A\+G\+ES\hypertarget{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa98ebe9413a727c7d0a45490531af9b49}{}\label{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa98ebe9413a727c7d0a45490531af9b49}
+}]Image search. \index{L\+O\+C\+AL@{L\+O\+C\+AL}!Search\+Request@{Search\+Request}}\index{Search\+Request@{Search\+Request}!L\+O\+C\+AL@{L\+O\+C\+AL}}\item[{\em 
+L\+O\+C\+AL\hypertarget{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faaf991e75914cde5f817233a2bce81762e}{}\label{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faaf991e75914cde5f817233a2bce81762e}
+}]Local search. \index{N\+E\+WS@{N\+E\+WS}!Search\+Request@{Search\+Request}}\index{Search\+Request@{Search\+Request}!N\+E\+WS@{N\+E\+WS}}\item[{\em 
+N\+E\+WS\hypertarget{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faad12f4dad36f02e174bf21d1a3fb09b12}{}\label{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faad12f4dad36f02e174bf21d1a3fb09b12}
+}]News search. \index{P\+R\+O\+D\+U\+C\+TS@{P\+R\+O\+D\+U\+C\+TS}!Search\+Request@{Search\+Request}}\index{Search\+Request@{Search\+Request}!P\+R\+O\+D\+U\+C\+TS@{P\+R\+O\+D\+U\+C\+TS}}\item[{\em 
+P\+R\+O\+D\+U\+C\+TS\hypertarget{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa67ff9b068bf93241b70573d8f41187b9}{}\label{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faa67ff9b068bf93241b70573d8f41187b9}
+}]Product search. \index{V\+I\+D\+EO@{V\+I\+D\+EO}!Search\+Request@{Search\+Request}}\index{Search\+Request@{Search\+Request}!V\+I\+D\+EO@{V\+I\+D\+EO}}\item[{\em 
+V\+I\+D\+EO\hypertarget{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faaeeefa4e6f9ffcb942dec5fc3b099b0d9}{}\label{structSearchRequest_ac8fbf72607c24a8ebaee257fec80e7faaeeefa4e6f9ffcb942dec5fc3b099b0d9}
+}]Video search. \end{description}
+\end{Desc}
+
+
+\subsection{Member Data Documentation}
+\index{Search\+Request@{Search\+Request}!result\+\_\+per\+\_\+page@{result\+\_\+per\+\_\+page}}
+\index{result\+\_\+per\+\_\+page@{result\+\_\+per\+\_\+page}!Search\+Request@{Search\+Request}}
+\subsubsection[{\texorpdfstring{result\+\_\+per\+\_\+page}{result_per_page}}]{\setlength{\rightskip}{0pt plus 5cm}optional int32 Search\+Request\+::result\+\_\+per\+\_\+page = 3 \mbox{[}default = 10\mbox{]}}\hypertarget{structSearchRequest_a40e02a2779af41f8bf5f7127665bd1a8}{}\label{structSearchRequest_a40e02a2779af41f8bf5f7127665bd1a8}
+
+
+Number of results per page. 
+
+The default is 10. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test.\+proto\end{DoxyCompactItemize}

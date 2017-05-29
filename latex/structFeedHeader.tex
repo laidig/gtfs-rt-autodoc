@@ -1,0 +1,68 @@
+\hypertarget{structFeedHeader}{}\section{Feed\+Header Struct Reference}
+\label{structFeedHeader}\index{Feed\+Header@{Feed\+Header}}
+
+
+Metadata about a feed, included in feed messages.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structFeedHeader_a014e597904baf6375bc0b83aeb31b825}{Incrementality} \{ {\bfseries F\+U\+L\+L\+\_\+\+D\+A\+T\+A\+S\+ET} = 0, 
+{\bfseries D\+I\+F\+F\+E\+R\+E\+N\+T\+I\+AL} = 1
+ \}\begin{DoxyCompactList}\small\item\em Determines whether the current fetch is incremental. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+required string \hyperlink{structFeedHeader_ab5e670b9182621dd8990b827ee028ee0}{gtfs\+\_\+realtime\+\_\+version} = 1
+\begin{DoxyCompactList}\small\item\em Version of the feed specification. \end{DoxyCompactList}\item 
+optional \hyperlink{structFeedHeader_a014e597904baf6375bc0b83aeb31b825}{Incrementality} {\bfseries incrementality} = 2 \mbox{[}default = F\+U\+L\+L\+\_\+\+D\+A\+T\+A\+S\+ET\mbox{]}\hypertarget{structFeedHeader_a4c34168892e27960b94aac08c845c46d}{}\label{structFeedHeader_a4c34168892e27960b94aac08c845c46d}
+
+\item 
+optional uint64 \hyperlink{structFeedHeader_ad49340967af0c1b646b59f918dc3325a}{timestamp} = 3
+\begin{DoxyCompactList}\small\item\em This timestamp identifies the moment when the content of this feed has been created (in server time). \end{DoxyCompactList}\item 
+extensions \hyperlink{structFeedHeader_a83d02812036b0fcdcb2c2a60f63d0547}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Metadata about a feed, included in feed messages. 
+
+\subsection{Member Enumeration Documentation}
+\index{Feed\+Header@{Feed\+Header}!Incrementality@{Incrementality}}
+\index{Incrementality@{Incrementality}!Feed\+Header@{Feed\+Header}}
+\subsubsection[{\texorpdfstring{Incrementality}{Incrementality}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Feed\+Header\+::\+Incrementality}}\hypertarget{structFeedHeader_a014e597904baf6375bc0b83aeb31b825}{}\label{structFeedHeader_a014e597904baf6375bc0b83aeb31b825}
+
+
+Determines whether the current fetch is incremental. 
+
+Currently, D\+I\+F\+F\+E\+R\+E\+N\+T\+I\+AL mode is unsupported and behavior is unspecified for feeds that use this mode. There are discussions on the G\+T\+F\+S-\/realtime mailing list around fully specifying the behavior of D\+I\+F\+F\+E\+R\+E\+N\+T\+I\+AL mode and the documentation will be updated when those discussions are finalized. 
+
+\subsection{Member Data Documentation}
+\index{Feed\+Header@{Feed\+Header}!gtfs\+\_\+realtime\+\_\+version@{gtfs\+\_\+realtime\+\_\+version}}
+\index{gtfs\+\_\+realtime\+\_\+version@{gtfs\+\_\+realtime\+\_\+version}!Feed\+Header@{Feed\+Header}}
+\subsubsection[{\texorpdfstring{gtfs\+\_\+realtime\+\_\+version}{gtfs_realtime_version}}]{\setlength{\rightskip}{0pt plus 5cm}required string Feed\+Header\+::gtfs\+\_\+realtime\+\_\+version = 1}\hypertarget{structFeedHeader_ab5e670b9182621dd8990b827ee028ee0}{}\label{structFeedHeader_ab5e670b9182621dd8990b827ee028ee0}
+
+
+Version of the feed specification. 
+
+The current version is 1.\+0. \index{Feed\+Header@{Feed\+Header}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Feed\+Header@{Feed\+Header}}
+\subsubsection[{\texorpdfstring{timestamp}{timestamp}}]{\setlength{\rightskip}{0pt plus 5cm}optional uint64 Feed\+Header\+::timestamp = 3}\hypertarget{structFeedHeader_ad49340967af0c1b646b59f918dc3325a}{}\label{structFeedHeader_ad49340967af0c1b646b59f918dc3325a}
+
+
+This timestamp identifies the moment when the content of this feed has been created (in server time). 
+
+In P\+O\+S\+IX time (i.\+e., number of seconds since January 1st 1970 00\+:00\+:00 U\+TC). \index{Feed\+Header@{Feed\+Header}!to@{to}}
+\index{to@{to}!Feed\+Header@{Feed\+Header}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Feed\+Header\+::to}\hypertarget{structFeedHeader_a83d02812036b0fcdcb2c2a60f63d0547}{}\label{structFeedHeader_a83d02812036b0fcdcb2c2a60f63d0547}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

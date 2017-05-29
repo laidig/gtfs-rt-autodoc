@@ -1,0 +1,65 @@
+\hypertarget{structTripUpdate_1_1StopTimeEvent}{}\section{Trip\+Update\+:\+:Stop\+Time\+Event Struct Reference}
+\label{structTripUpdate_1_1StopTimeEvent}\index{Trip\+Update\+::\+Stop\+Time\+Event@{Trip\+Update\+::\+Stop\+Time\+Event}}
+
+
+Timing information for a single predicted event (either arrival or departure).  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+optional int32 \hyperlink{structTripUpdate_1_1StopTimeEvent_afe99bf7417c3476bab4bfef2de42031e}{delay} = 1
+\begin{DoxyCompactList}\small\item\em Delay (in seconds) can be positive (meaning that the vehicle is late) or negative (meaning that the vehicle is ahead of schedule). \end{DoxyCompactList}\item 
+optional int64 \hyperlink{structTripUpdate_1_1StopTimeEvent_ad4b60263cd802942cfe9ecb5575a43e1}{time} = 2
+\begin{DoxyCompactList}\small\item\em Event as absolute time. \end{DoxyCompactList}\item 
+optional int32 \hyperlink{structTripUpdate_1_1StopTimeEvent_aa5a428ea725519680c1b1b1b23d7c454}{uncertainty} = 3
+\begin{DoxyCompactList}\small\item\em If uncertainty is omitted, it is interpreted as unknown. \end{DoxyCompactList}\item 
+extensions \hyperlink{structTripUpdate_1_1StopTimeEvent_a8ec3aa808c676e498daef61b967f7dd3}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Timing information for a single predicted event (either arrival or departure). 
+
+Timing consists of delay and/or estimated time, and uncertainty.
+\begin{DoxyItemize}
+\item delay should be used when the prediction is given relative to some existing schedule in G\+T\+FS.
+\item time should be given whether there is a predicted schedule or not. If both time and delay are specified, time will take precedence (although normally, time, if given for a scheduled trip, should be equal to scheduled time in G\+T\+FS + delay).
+\end{DoxyItemize}
+
+Uncertainty applies equally to both time and delay. The uncertainty roughly specifies the expected error in true delay (but note, we don\textquotesingle{}t yet define its precise statistical meaning). It\textquotesingle{}s possible for the uncertainty to be 0, for example for trains that are driven under computer timing control. 
+
+\subsection{Member Data Documentation}
+\index{Trip\+Update\+::\+Stop\+Time\+Event@{Trip\+Update\+::\+Stop\+Time\+Event}!delay@{delay}}
+\index{delay@{delay}!Trip\+Update\+::\+Stop\+Time\+Event@{Trip\+Update\+::\+Stop\+Time\+Event}}
+\subsubsection[{\texorpdfstring{delay}{delay}}]{\setlength{\rightskip}{0pt plus 5cm}optional int32 Trip\+Update\+::\+Stop\+Time\+Event\+::delay = 1}\hypertarget{structTripUpdate_1_1StopTimeEvent_afe99bf7417c3476bab4bfef2de42031e}{}\label{structTripUpdate_1_1StopTimeEvent_afe99bf7417c3476bab4bfef2de42031e}
+
+
+Delay (in seconds) can be positive (meaning that the vehicle is late) or negative (meaning that the vehicle is ahead of schedule). 
+
+Delay of 0 means that the vehicle is exactly on time. \index{Trip\+Update\+::\+Stop\+Time\+Event@{Trip\+Update\+::\+Stop\+Time\+Event}!time@{time}}
+\index{time@{time}!Trip\+Update\+::\+Stop\+Time\+Event@{Trip\+Update\+::\+Stop\+Time\+Event}}
+\subsubsection[{\texorpdfstring{time}{time}}]{\setlength{\rightskip}{0pt plus 5cm}optional int64 Trip\+Update\+::\+Stop\+Time\+Event\+::time = 2}\hypertarget{structTripUpdate_1_1StopTimeEvent_ad4b60263cd802942cfe9ecb5575a43e1}{}\label{structTripUpdate_1_1StopTimeEvent_ad4b60263cd802942cfe9ecb5575a43e1}
+
+
+Event as absolute time. 
+
+In Unix time (i.\+e., number of seconds since January 1st 1970 00\+:00\+:00 U\+TC). \index{Trip\+Update\+::\+Stop\+Time\+Event@{Trip\+Update\+::\+Stop\+Time\+Event}!to@{to}}
+\index{to@{to}!Trip\+Update\+::\+Stop\+Time\+Event@{Trip\+Update\+::\+Stop\+Time\+Event}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Trip\+Update\+::\+Stop\+Time\+Event\+::to}\hypertarget{structTripUpdate_1_1StopTimeEvent_a8ec3aa808c676e498daef61b967f7dd3}{}\label{structTripUpdate_1_1StopTimeEvent_a8ec3aa808c676e498daef61b967f7dd3}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+\index{Trip\+Update\+::\+Stop\+Time\+Event@{Trip\+Update\+::\+Stop\+Time\+Event}!uncertainty@{uncertainty}}
+\index{uncertainty@{uncertainty}!Trip\+Update\+::\+Stop\+Time\+Event@{Trip\+Update\+::\+Stop\+Time\+Event}}
+\subsubsection[{\texorpdfstring{uncertainty}{uncertainty}}]{\setlength{\rightskip}{0pt plus 5cm}optional int32 Trip\+Update\+::\+Stop\+Time\+Event\+::uncertainty = 3}\hypertarget{structTripUpdate_1_1StopTimeEvent_aa5a428ea725519680c1b1b1b23d7c454}{}\label{structTripUpdate_1_1StopTimeEvent_aa5a428ea725519680c1b1b1b23d7c454}
+
+
+If uncertainty is omitted, it is interpreted as unknown. 
+
+If the prediction is unknown or too uncertain, the delay (or time) field should be empty. In such case, the uncertainty field is ignored. To specify a completely certain prediction, set its uncertainty to 0. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

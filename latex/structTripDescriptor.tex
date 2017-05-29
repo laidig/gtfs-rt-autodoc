@@ -1,0 +1,110 @@
+\hypertarget{structTripDescriptor}{}\section{Trip\+Descriptor Struct Reference}
+\label{structTripDescriptor}\index{Trip\+Descriptor@{Trip\+Descriptor}}
+
+
+A descriptor that identifies an instance of a G\+T\+FS trip, or all instances of a trip along a route.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structTripDescriptor_a3edbca669de2c1c3350403537b24a26e}{Schedule\+Relationship} \{ \hyperlink{structTripDescriptor_a3edbca669de2c1c3350403537b24a26eabb46adf5d175229c9233128f5c91cc9a}{S\+C\+H\+E\+D\+U\+L\+ED} = 0, 
+\hyperlink{structTripDescriptor_a3edbca669de2c1c3350403537b24a26ea4a2d9e2e7fc1c6fe3e0c04bdb9f87d21}{A\+D\+D\+ED} = 1, 
+\hyperlink{structTripDescriptor_a3edbca669de2c1c3350403537b24a26ea63eb6ab0096e0964d2ddef7b08885894}{U\+N\+S\+C\+H\+E\+D\+U\+L\+ED} = 2, 
+\hyperlink{structTripDescriptor_a3edbca669de2c1c3350403537b24a26ea39252ba762feeb4e8a9b464d00a5973d}{C\+A\+N\+C\+E\+L\+ED} = 3
+ \}\begin{DoxyCompactList}\small\item\em The relation between this trip and the static schedule. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+optional string \hyperlink{structTripDescriptor_a6939be856ffede4c8b9e54b8f7a4d311}{trip\+\_\+id} = 1
+\begin{DoxyCompactList}\small\item\em The trip\+\_\+id from the G\+T\+FS feed that this selector refers to. \end{DoxyCompactList}\item 
+optional string \hyperlink{structTripDescriptor_a46ee0f9073f22f5d81ab9dc510aca904}{route\+\_\+id} = 5\hypertarget{structTripDescriptor_a46ee0f9073f22f5d81ab9dc510aca904}{}\label{structTripDescriptor_a46ee0f9073f22f5d81ab9dc510aca904}
+
+\begin{DoxyCompactList}\small\item\em The route\+\_\+id from the G\+T\+FS that this selector refers to. \end{DoxyCompactList}\item 
+optional uint32 \hyperlink{structTripDescriptor_a02d3a6531b0514b318dccd7edf4a3fee}{direction\+\_\+id} = 6
+\begin{DoxyCompactList}\small\item\em The direction\+\_\+id from the G\+T\+FS feed trips.\+txt file, indicating the direction of travel for trips this selector refers to. \end{DoxyCompactList}\item 
+optional string \hyperlink{structTripDescriptor_a799660dd75143d643c5552ac945fe16e}{start\+\_\+time} = 2
+\begin{DoxyCompactList}\small\item\em The initially scheduled start time of this trip instance. \end{DoxyCompactList}\item 
+optional string \hyperlink{structTripDescriptor_a24d4363686da053b0eadbf04313a5055}{start\+\_\+date} = 3
+\begin{DoxyCompactList}\small\item\em The scheduled start date of this trip instance. \end{DoxyCompactList}\item 
+optional \hyperlink{structTripDescriptor_a3edbca669de2c1c3350403537b24a26e}{Schedule\+Relationship} {\bfseries schedule\+\_\+relationship} = 4\hypertarget{structTripDescriptor_ab800b567a069f306089e4aecc82cbff9}{}\label{structTripDescriptor_ab800b567a069f306089e4aecc82cbff9}
+
+\item 
+extensions \hyperlink{structTripDescriptor_a1c2d7a6af17cb6ebf909b087bc2af535}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A descriptor that identifies an instance of a G\+T\+FS trip, or all instances of a trip along a route. 
+
+
+\begin{DoxyItemize}
+\item To specify a single trip instance, the trip\+\_\+id (and if necessary, start\+\_\+time) is set. If route\+\_\+id is also set, then it should be same as one that the given trip corresponds to.
+\item To specify all the trips along a given route, only the route\+\_\+id should be set. Note that if the trip\+\_\+id is not known, then stop sequence ids in \hyperlink{structTripUpdate}{Trip\+Update} are not sufficient, and stop\+\_\+ids must be provided as well. In addition, absolute arrival/departure times must be provided. 
+\end{DoxyItemize}
+
+\subsection{Member Enumeration Documentation}
+\index{Trip\+Descriptor@{Trip\+Descriptor}!Schedule\+Relationship@{Schedule\+Relationship}}
+\index{Schedule\+Relationship@{Schedule\+Relationship}!Trip\+Descriptor@{Trip\+Descriptor}}
+\subsubsection[{\texorpdfstring{Schedule\+Relationship}{ScheduleRelationship}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Trip\+Descriptor\+::\+Schedule\+Relationship}}\hypertarget{structTripDescriptor_a3edbca669de2c1c3350403537b24a26e}{}\label{structTripDescriptor_a3edbca669de2c1c3350403537b24a26e}
+
+
+The relation between this trip and the static schedule. 
+
+If a trip is done in accordance with temporary schedule, not reflected in G\+T\+FS, then it shouldn\textquotesingle{}t be marked as S\+C\+H\+E\+D\+U\+L\+ED, but likely as A\+D\+D\+ED. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+C\+H\+E\+D\+U\+L\+ED@{S\+C\+H\+E\+D\+U\+L\+ED}!Trip\+Descriptor@{Trip\+Descriptor}}\index{Trip\+Descriptor@{Trip\+Descriptor}!S\+C\+H\+E\+D\+U\+L\+ED@{S\+C\+H\+E\+D\+U\+L\+ED}}\item[{\em 
+S\+C\+H\+E\+D\+U\+L\+ED\hypertarget{structTripDescriptor_a3edbca669de2c1c3350403537b24a26eabb46adf5d175229c9233128f5c91cc9a}{}\label{structTripDescriptor_a3edbca669de2c1c3350403537b24a26eabb46adf5d175229c9233128f5c91cc9a}
+}]Trip that is running in accordance with its G\+T\+FS schedule, or is close enough to the scheduled trip to be associated with it. \index{A\+D\+D\+ED@{A\+D\+D\+ED}!Trip\+Descriptor@{Trip\+Descriptor}}\index{Trip\+Descriptor@{Trip\+Descriptor}!A\+D\+D\+ED@{A\+D\+D\+ED}}\item[{\em 
+A\+D\+D\+ED\hypertarget{structTripDescriptor_a3edbca669de2c1c3350403537b24a26ea4a2d9e2e7fc1c6fe3e0c04bdb9f87d21}{}\label{structTripDescriptor_a3edbca669de2c1c3350403537b24a26ea4a2d9e2e7fc1c6fe3e0c04bdb9f87d21}
+}]An extra trip that was added in addition to a running schedule, for example, to replace a broken vehicle or to respond to sudden passenger load. \index{U\+N\+S\+C\+H\+E\+D\+U\+L\+ED@{U\+N\+S\+C\+H\+E\+D\+U\+L\+ED}!Trip\+Descriptor@{Trip\+Descriptor}}\index{Trip\+Descriptor@{Trip\+Descriptor}!U\+N\+S\+C\+H\+E\+D\+U\+L\+ED@{U\+N\+S\+C\+H\+E\+D\+U\+L\+ED}}\item[{\em 
+U\+N\+S\+C\+H\+E\+D\+U\+L\+ED\hypertarget{structTripDescriptor_a3edbca669de2c1c3350403537b24a26ea63eb6ab0096e0964d2ddef7b08885894}{}\label{structTripDescriptor_a3edbca669de2c1c3350403537b24a26ea63eb6ab0096e0964d2ddef7b08885894}
+}]A trip that is running with no schedule associated to it, for example, if there is no schedule at all. \index{C\+A\+N\+C\+E\+L\+ED@{C\+A\+N\+C\+E\+L\+ED}!Trip\+Descriptor@{Trip\+Descriptor}}\index{Trip\+Descriptor@{Trip\+Descriptor}!C\+A\+N\+C\+E\+L\+ED@{C\+A\+N\+C\+E\+L\+ED}}\item[{\em 
+C\+A\+N\+C\+E\+L\+ED\hypertarget{structTripDescriptor_a3edbca669de2c1c3350403537b24a26ea39252ba762feeb4e8a9b464d00a5973d}{}\label{structTripDescriptor_a3edbca669de2c1c3350403537b24a26ea39252ba762feeb4e8a9b464d00a5973d}
+}]A trip that existed in the schedule but was removed. \end{description}
+\end{Desc}
+
+
+\subsection{Member Data Documentation}
+\index{Trip\+Descriptor@{Trip\+Descriptor}!direction\+\_\+id@{direction\+\_\+id}}
+\index{direction\+\_\+id@{direction\+\_\+id}!Trip\+Descriptor@{Trip\+Descriptor}}
+\subsubsection[{\texorpdfstring{direction\+\_\+id}{direction_id}}]{\setlength{\rightskip}{0pt plus 5cm}optional uint32 Trip\+Descriptor\+::direction\+\_\+id = 6}\hypertarget{structTripDescriptor_a02d3a6531b0514b318dccd7edf4a3fee}{}\label{structTripDescriptor_a02d3a6531b0514b318dccd7edf4a3fee}
+
+
+The direction\+\_\+id from the G\+T\+FS feed trips.\+txt file, indicating the direction of travel for trips this selector refers to. 
+
+This field is still experimental, and subject to change. It may be formally adopted in the future. \index{Trip\+Descriptor@{Trip\+Descriptor}!start\+\_\+date@{start\+\_\+date}}
+\index{start\+\_\+date@{start\+\_\+date}!Trip\+Descriptor@{Trip\+Descriptor}}
+\subsubsection[{\texorpdfstring{start\+\_\+date}{start_date}}]{\setlength{\rightskip}{0pt plus 5cm}optional string Trip\+Descriptor\+::start\+\_\+date = 3}\hypertarget{structTripDescriptor_a24d4363686da053b0eadbf04313a5055}{}\label{structTripDescriptor_a24d4363686da053b0eadbf04313a5055}
+
+
+The scheduled start date of this trip instance. 
+
+Must be provided to disambiguate trips that are so late as to collide with a scheduled trip on a next day. For example, for a train that departs 8\+:00 and 20\+:00 every day, and is 12 hours late, there would be two distinct trips on the same time. This field can be provided but is not mandatory for schedules in which such collisions are impossible -\/ for example, a service running on hourly schedule where a vehicle that is one hour late is not considered to be related to schedule anymore. In Y\+Y\+Y\+Y\+M\+M\+DD format. \index{Trip\+Descriptor@{Trip\+Descriptor}!start\+\_\+time@{start\+\_\+time}}
+\index{start\+\_\+time@{start\+\_\+time}!Trip\+Descriptor@{Trip\+Descriptor}}
+\subsubsection[{\texorpdfstring{start\+\_\+time}{start_time}}]{\setlength{\rightskip}{0pt plus 5cm}optional string Trip\+Descriptor\+::start\+\_\+time = 2}\hypertarget{structTripDescriptor_a799660dd75143d643c5552ac945fe16e}{}\label{structTripDescriptor_a799660dd75143d643c5552ac945fe16e}
+
+
+The initially scheduled start time of this trip instance. 
+
+When the trip\+\_\+id corresponds to a non-\/frequency-\/based trip, this field should either be omitted or be equal to the value in the G\+T\+FS feed. When the trip\+\_\+id correponds to a frequency-\/based trip, the start\+\_\+time must be specified for trip updates and vehicle positions. If the trip corresponds to exact\+\_\+times=1 G\+T\+FS record, then start\+\_\+time must be some multiple (including zero) of headway\+\_\+secs later than frequencies.\+txt start\+\_\+time for the corresponding time period. If the trip corresponds to exact\+\_\+times=0, then its start\+\_\+time may be arbitrary, and is initially expected to be the first departure of the trip. Once established, the start\+\_\+time of this frequency-\/based trip should be considered immutable, even if the first departure time changes -- that time change may instead be reflected in a Stop\+Time\+Update. Format and semantics of the field is same as that of G\+T\+F\+S/frequencies.\+txt/start\+\_\+time, e.\+g., 11\+:15\+:35 or 25\+:15\+:35. \index{Trip\+Descriptor@{Trip\+Descriptor}!to@{to}}
+\index{to@{to}!Trip\+Descriptor@{Trip\+Descriptor}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Trip\+Descriptor\+::to}\hypertarget{structTripDescriptor_a1c2d7a6af17cb6ebf909b087bc2af535}{}\label{structTripDescriptor_a1c2d7a6af17cb6ebf909b087bc2af535}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+\index{Trip\+Descriptor@{Trip\+Descriptor}!trip\+\_\+id@{trip\+\_\+id}}
+\index{trip\+\_\+id@{trip\+\_\+id}!Trip\+Descriptor@{Trip\+Descriptor}}
+\subsubsection[{\texorpdfstring{trip\+\_\+id}{trip_id}}]{\setlength{\rightskip}{0pt plus 5cm}optional string Trip\+Descriptor\+::trip\+\_\+id = 1}\hypertarget{structTripDescriptor_a6939be856ffede4c8b9e54b8f7a4d311}{}\label{structTripDescriptor_a6939be856ffede4c8b9e54b8f7a4d311}
+
+
+The trip\+\_\+id from the G\+T\+FS feed that this selector refers to. 
+
+For non frequency-\/based trips, this field is enough to uniquely identify the trip. For frequency-\/based trip, start\+\_\+time and start\+\_\+date might also be necessary. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

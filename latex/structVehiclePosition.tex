@@ -1,0 +1,172 @@
+\hypertarget{structVehiclePosition}{}\section{Vehicle\+Position Struct Reference}
+\label{structVehiclePosition}\index{Vehicle\+Position@{Vehicle\+Position}}
+
+
+Realtime positioning information for a given vehicle.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6e}{Vehicle\+Stop\+Status} \{ \hyperlink{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6ea95978a45776e9d1a6b211ea4d10e852b}{I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+AT} = 0, 
+\hyperlink{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6ea665c375499f4e9c38be06ba86c3840ea}{S\+T\+O\+P\+P\+E\+D\+\_\+\+AT} = 1, 
+\hyperlink{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6eaa348824abc51d4c2aa2c45fd0c05dc14}{I\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+TO} = 2
+ \}
+\item 
+enum \hyperlink{structVehiclePosition_a6b68a02175508df528c0fb3dfc52c7c5}{Congestion\+Level} \{ \\*
+{\bfseries U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+N\+G\+E\+S\+T\+I\+O\+N\+\_\+\+L\+E\+V\+EL} = 0, 
+{\bfseries R\+U\+N\+N\+I\+N\+G\+\_\+\+S\+M\+O\+O\+T\+H\+LY} = 1, 
+{\bfseries S\+T\+O\+P\+\_\+\+A\+N\+D\+\_\+\+GO} = 2, 
+{\bfseries C\+O\+N\+G\+E\+S\+T\+I\+ON} = 3, 
+\\*
+\hyperlink{structVehiclePosition_a6b68a02175508df528c0fb3dfc52c7c5a7a9272ea707c92007d42b72957d8d570}{S\+E\+V\+E\+R\+E\+\_\+\+C\+O\+N\+G\+E\+S\+T\+I\+ON} = 4
+ \}\begin{DoxyCompactList}\small\item\em Congestion level that is affecting this vehicle. \end{DoxyCompactList}
+\item 
+enum \hyperlink{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0d}{Occupancy\+Status} \{ \\*
+\hyperlink{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da87a5c81df0fd6b1539bacec16fc4c6b5}{E\+M\+P\+TY} = 0, 
+\hyperlink{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0daf47c028fa64a8263faf6e053d0f43386}{M\+A\+N\+Y\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE} = 1, 
+\hyperlink{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da0a86e1ce880abf48e47b46edc1c57723}{F\+E\+W\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE} = 2, 
+\hyperlink{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da16f9e21186d7119e1b79087143b24423}{S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY} = 3, 
+\\*
+\hyperlink{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da05b703d16f75a5a620c3552d4a80efac}{C\+R\+U\+S\+H\+E\+D\+\_\+\+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY} = 4, 
+\hyperlink{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0dab6b6e227c6cf6f9aace836cb10e64d7c}{F\+U\+LL} = 5, 
+\hyperlink{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da08918f93cb7e230704f7a8fcda9156c1}{N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+I\+N\+G\+\_\+\+P\+A\+S\+S\+E\+N\+G\+E\+RS} = 6
+ \}\begin{DoxyCompactList}\small\item\em The degree of passenger occupancy of the vehicle. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+optional \hyperlink{structTripDescriptor}{Trip\+Descriptor} \hyperlink{structVehiclePosition_a68605569650190d0c85783f544bc73d4}{trip} = 1
+\begin{DoxyCompactList}\small\item\em The Trip that this vehicle is serving. \end{DoxyCompactList}\item 
+optional \hyperlink{structVehicleDescriptor}{Vehicle\+Descriptor} \hyperlink{structVehiclePosition_a412e2409241622073e82b6f4a2190ed6}{vehicle} = 8\hypertarget{structVehiclePosition_a412e2409241622073e82b6f4a2190ed6}{}\label{structVehiclePosition_a412e2409241622073e82b6f4a2190ed6}
+
+\begin{DoxyCompactList}\small\item\em Additional information on the vehicle that is serving this trip. \end{DoxyCompactList}\item 
+optional \hyperlink{structPosition}{Position} \hyperlink{structVehiclePosition_aad758c3889b783356301a01f99289a64}{position} = 2\hypertarget{structVehiclePosition_aad758c3889b783356301a01f99289a64}{}\label{structVehiclePosition_aad758c3889b783356301a01f99289a64}
+
+\begin{DoxyCompactList}\small\item\em Current position of this vehicle. \end{DoxyCompactList}\item 
+optional uint32 \hyperlink{structVehiclePosition_a2fde6125d13fbc9fabc8f48eada1d038}{current\+\_\+stop\+\_\+sequence} = 3
+\begin{DoxyCompactList}\small\item\em The stop sequence index of the current stop. \end{DoxyCompactList}\item 
+optional string \hyperlink{structVehiclePosition_a4b7ba68aab943efc93017657f40867f9}{stop\+\_\+id} = 7
+\begin{DoxyCompactList}\small\item\em Identifies the current stop. \end{DoxyCompactList}\item 
+optional \hyperlink{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6e}{Vehicle\+Stop\+Status} \hyperlink{structVehiclePosition_ad900e7ee70d8271d8fd096233b0560f3}{current\+\_\+status} = 4 \mbox{[}default = \hyperlink{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6eaa348824abc51d4c2aa2c45fd0c05dc14}{I\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+TO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em The exact status of the vehicle with respect to the current stop. \end{DoxyCompactList}\item 
+optional uint64 \hyperlink{structVehiclePosition_acb63a32840849447f6a4dfd2f74f1907}{timestamp} = 5
+\begin{DoxyCompactList}\small\item\em Moment at which the vehicle\textquotesingle{}s position was measured. \end{DoxyCompactList}\item 
+optional \hyperlink{structVehiclePosition_a6b68a02175508df528c0fb3dfc52c7c5}{Congestion\+Level} {\bfseries congestion\+\_\+level} = 6\hypertarget{structVehiclePosition_a3d06be45e04dd3d342b169c130e15470}{}\label{structVehiclePosition_a3d06be45e04dd3d342b169c130e15470}
+
+\item 
+optional \hyperlink{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0d}{Occupancy\+Status} {\bfseries occupancy\+\_\+status} = 9\hypertarget{structVehiclePosition_a9a97158749e519f16014ba53973fb1fe}{}\label{structVehiclePosition_a9a97158749e519f16014ba53973fb1fe}
+
+\item 
+extensions \hyperlink{structVehiclePosition_a84bafc1fa0f1b48ed586343427f6aed7}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Realtime positioning information for a given vehicle. 
+
+\subsection{Member Enumeration Documentation}
+\index{Vehicle\+Position@{Vehicle\+Position}!Congestion\+Level@{Congestion\+Level}}
+\index{Congestion\+Level@{Congestion\+Level}!Vehicle\+Position@{Vehicle\+Position}}
+\subsubsection[{\texorpdfstring{Congestion\+Level}{CongestionLevel}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Vehicle\+Position\+::\+Congestion\+Level}}\hypertarget{structVehiclePosition_a6b68a02175508df528c0fb3dfc52c7c5}{}\label{structVehiclePosition_a6b68a02175508df528c0fb3dfc52c7c5}
+
+
+Congestion level that is affecting this vehicle. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+E\+V\+E\+R\+E\+\_\+\+C\+O\+N\+G\+E\+S\+T\+I\+ON@{S\+E\+V\+E\+R\+E\+\_\+\+C\+O\+N\+G\+E\+S\+T\+I\+ON}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!S\+E\+V\+E\+R\+E\+\_\+\+C\+O\+N\+G\+E\+S\+T\+I\+ON@{S\+E\+V\+E\+R\+E\+\_\+\+C\+O\+N\+G\+E\+S\+T\+I\+ON}}\item[{\em 
+S\+E\+V\+E\+R\+E\+\_\+\+C\+O\+N\+G\+E\+S\+T\+I\+ON\hypertarget{structVehiclePosition_a6b68a02175508df528c0fb3dfc52c7c5a7a9272ea707c92007d42b72957d8d570}{}\label{structVehiclePosition_a6b68a02175508df528c0fb3dfc52c7c5a7a9272ea707c92007d42b72957d8d570}
+}]People leaving their cars. \end{description}
+\end{Desc}
+\index{Vehicle\+Position@{Vehicle\+Position}!Occupancy\+Status@{Occupancy\+Status}}
+\index{Occupancy\+Status@{Occupancy\+Status}!Vehicle\+Position@{Vehicle\+Position}}
+\subsubsection[{\texorpdfstring{Occupancy\+Status}{OccupancyStatus}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Vehicle\+Position\+::\+Occupancy\+Status}}\hypertarget{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0d}{}\label{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0d}
+
+
+The degree of passenger occupancy of the vehicle. 
+
+This field is still experimental, and subject to change. It may be formally adopted in the future. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\+M\+P\+TY@{E\+M\+P\+TY}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!E\+M\+P\+TY@{E\+M\+P\+TY}}\item[{\em 
+E\+M\+P\+TY\hypertarget{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da87a5c81df0fd6b1539bacec16fc4c6b5}{}\label{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da87a5c81df0fd6b1539bacec16fc4c6b5}
+}]The vehicle is considered empty by most measures, and has few or no passengers onboard, but is still accepting passengers. \index{M\+A\+N\+Y\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE@{M\+A\+N\+Y\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!M\+A\+N\+Y\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE@{M\+A\+N\+Y\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}}\item[{\em 
+M\+A\+N\+Y\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE\hypertarget{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0daf47c028fa64a8263faf6e053d0f43386}{}\label{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0daf47c028fa64a8263faf6e053d0f43386}
+}]The vehicle has a relatively large percentage of seats available. What percentage of free seats out of the total seats available is to be considered large enough to fall into this category is determined at the discretion of the producer. \index{F\+E\+W\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE@{F\+E\+W\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!F\+E\+W\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE@{F\+E\+W\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}}\item[{\em 
+F\+E\+W\+\_\+\+S\+E\+A\+T\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE\hypertarget{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da0a86e1ce880abf48e47b46edc1c57723}{}\label{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da0a86e1ce880abf48e47b46edc1c57723}
+}]The vehicle has a relatively small percentage of seats available. What percentage of free seats out of the total seats available is to be considered small enough to fall into this category is determined at the discretion of the feed producer. \index{S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY@{S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY@{S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY}}\item[{\em 
+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY\hypertarget{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da16f9e21186d7119e1b79087143b24423}{}\label{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da16f9e21186d7119e1b79087143b24423}
+}]The vehicle can currently accommodate only standing passengers. \index{C\+R\+U\+S\+H\+E\+D\+\_\+\+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY@{C\+R\+U\+S\+H\+E\+D\+\_\+\+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!C\+R\+U\+S\+H\+E\+D\+\_\+\+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY@{C\+R\+U\+S\+H\+E\+D\+\_\+\+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY}}\item[{\em 
+C\+R\+U\+S\+H\+E\+D\+\_\+\+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+O\+O\+M\+\_\+\+O\+N\+LY\hypertarget{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da05b703d16f75a5a620c3552d4a80efac}{}\label{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da05b703d16f75a5a620c3552d4a80efac}
+}]The vehicle can currently accommodate only standing passengers and has limited space for them. \index{F\+U\+LL@{F\+U\+LL}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!F\+U\+LL@{F\+U\+LL}}\item[{\em 
+F\+U\+LL\hypertarget{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0dab6b6e227c6cf6f9aace836cb10e64d7c}{}\label{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0dab6b6e227c6cf6f9aace836cb10e64d7c}
+}]The vehicle is considered full by most measures, but may still be allowing passengers to board. \index{N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+I\+N\+G\+\_\+\+P\+A\+S\+S\+E\+N\+G\+E\+RS@{N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+I\+N\+G\+\_\+\+P\+A\+S\+S\+E\+N\+G\+E\+RS}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+I\+N\+G\+\_\+\+P\+A\+S\+S\+E\+N\+G\+E\+RS@{N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+I\+N\+G\+\_\+\+P\+A\+S\+S\+E\+N\+G\+E\+RS}}\item[{\em 
+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+I\+N\+G\+\_\+\+P\+A\+S\+S\+E\+N\+G\+E\+RS\hypertarget{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da08918f93cb7e230704f7a8fcda9156c1}{}\label{structVehiclePosition_a3b7e3ee1e916599ecb7fd088d4f53f0da08918f93cb7e230704f7a8fcda9156c1}
+}]The vehicle is not accepting additional passengers. \end{description}
+\end{Desc}
+\index{Vehicle\+Position@{Vehicle\+Position}!Vehicle\+Stop\+Status@{Vehicle\+Stop\+Status}}
+\index{Vehicle\+Stop\+Status@{Vehicle\+Stop\+Status}!Vehicle\+Position@{Vehicle\+Position}}
+\subsubsection[{\texorpdfstring{Vehicle\+Stop\+Status}{VehicleStopStatus}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Vehicle\+Position\+::\+Vehicle\+Stop\+Status}}\hypertarget{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6e}{}\label{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+AT@{I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+AT}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+AT@{I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+AT}}\item[{\em 
+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+AT\hypertarget{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6ea95978a45776e9d1a6b211ea4d10e852b}{}\label{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6ea95978a45776e9d1a6b211ea4d10e852b}
+}]The vehicle is just about to arrive at the stop (on a stop display, the vehicle symbol typically flashes). \index{S\+T\+O\+P\+P\+E\+D\+\_\+\+AT@{S\+T\+O\+P\+P\+E\+D\+\_\+\+AT}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!S\+T\+O\+P\+P\+E\+D\+\_\+\+AT@{S\+T\+O\+P\+P\+E\+D\+\_\+\+AT}}\item[{\em 
+S\+T\+O\+P\+P\+E\+D\+\_\+\+AT\hypertarget{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6ea665c375499f4e9c38be06ba86c3840ea}{}\label{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6ea665c375499f4e9c38be06ba86c3840ea}
+}]The vehicle is standing at the stop. \index{I\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+TO@{I\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+TO}!Vehicle\+Position@{Vehicle\+Position}}\index{Vehicle\+Position@{Vehicle\+Position}!I\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+TO@{I\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+TO}}\item[{\em 
+I\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+TO\hypertarget{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6eaa348824abc51d4c2aa2c45fd0c05dc14}{}\label{structVehiclePosition_a59db950a979338c8c299fdd5b8383c6eaa348824abc51d4c2aa2c45fd0c05dc14}
+}]The vehicle has departed and is in transit to the next stop. \end{description}
+\end{Desc}
+
+
+\subsection{Member Data Documentation}
+\index{Vehicle\+Position@{Vehicle\+Position}!current\+\_\+status@{current\+\_\+status}}
+\index{current\+\_\+status@{current\+\_\+status}!Vehicle\+Position@{Vehicle\+Position}}
+\subsubsection[{\texorpdfstring{current\+\_\+status}{current_status}}]{\setlength{\rightskip}{0pt plus 5cm}optional {\bf Vehicle\+Stop\+Status} Vehicle\+Position\+::current\+\_\+status = 4 \mbox{[}default = {\bf I\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+TO}\mbox{]}}\hypertarget{structVehiclePosition_ad900e7ee70d8271d8fd096233b0560f3}{}\label{structVehiclePosition_ad900e7ee70d8271d8fd096233b0560f3}
+
+
+The exact status of the vehicle with respect to the current stop. 
+
+Ignored if current\+\_\+stop\+\_\+sequence is missing. \index{Vehicle\+Position@{Vehicle\+Position}!current\+\_\+stop\+\_\+sequence@{current\+\_\+stop\+\_\+sequence}}
+\index{current\+\_\+stop\+\_\+sequence@{current\+\_\+stop\+\_\+sequence}!Vehicle\+Position@{Vehicle\+Position}}
+\subsubsection[{\texorpdfstring{current\+\_\+stop\+\_\+sequence}{current_stop_sequence}}]{\setlength{\rightskip}{0pt plus 5cm}optional uint32 Vehicle\+Position\+::current\+\_\+stop\+\_\+sequence = 3}\hypertarget{structVehiclePosition_a2fde6125d13fbc9fabc8f48eada1d038}{}\label{structVehiclePosition_a2fde6125d13fbc9fabc8f48eada1d038}
+
+
+The stop sequence index of the current stop. 
+
+The meaning of current\+\_\+stop\+\_\+sequence (i.\+e., the stop that it refers to) is determined by current\+\_\+status. If current\+\_\+status is missing I\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+TO is assumed. \index{Vehicle\+Position@{Vehicle\+Position}!stop\+\_\+id@{stop\+\_\+id}}
+\index{stop\+\_\+id@{stop\+\_\+id}!Vehicle\+Position@{Vehicle\+Position}}
+\subsubsection[{\texorpdfstring{stop\+\_\+id}{stop_id}}]{\setlength{\rightskip}{0pt plus 5cm}optional string Vehicle\+Position\+::stop\+\_\+id = 7}\hypertarget{structVehiclePosition_a4b7ba68aab943efc93017657f40867f9}{}\label{structVehiclePosition_a4b7ba68aab943efc93017657f40867f9}
+
+
+Identifies the current stop. 
+
+The value must be the same as in stops.\+txt in the corresponding G\+T\+FS feed. \index{Vehicle\+Position@{Vehicle\+Position}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Vehicle\+Position@{Vehicle\+Position}}
+\subsubsection[{\texorpdfstring{timestamp}{timestamp}}]{\setlength{\rightskip}{0pt plus 5cm}optional uint64 Vehicle\+Position\+::timestamp = 5}\hypertarget{structVehiclePosition_acb63a32840849447f6a4dfd2f74f1907}{}\label{structVehiclePosition_acb63a32840849447f6a4dfd2f74f1907}
+
+
+Moment at which the vehicle\textquotesingle{}s position was measured. 
+
+In P\+O\+S\+IX time (i.\+e., number of seconds since January 1st 1970 00\+:00\+:00 U\+TC). \index{Vehicle\+Position@{Vehicle\+Position}!to@{to}}
+\index{to@{to}!Vehicle\+Position@{Vehicle\+Position}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Vehicle\+Position\+::to}\hypertarget{structVehiclePosition_a84bafc1fa0f1b48ed586343427f6aed7}{}\label{structVehiclePosition_a84bafc1fa0f1b48ed586343427f6aed7}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+\index{Vehicle\+Position@{Vehicle\+Position}!trip@{trip}}
+\index{trip@{trip}!Vehicle\+Position@{Vehicle\+Position}}
+\subsubsection[{\texorpdfstring{trip}{trip}}]{\setlength{\rightskip}{0pt plus 5cm}optional {\bf Trip\+Descriptor} Vehicle\+Position\+::trip = 1}\hypertarget{structVehiclePosition_a68605569650190d0c85783f544bc73d4}{}\label{structVehiclePosition_a68605569650190d0c85783f544bc73d4}
+
+
+The Trip that this vehicle is serving. 
+
+Can be empty or partial if the vehicle can not be identified with a given trip instance. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

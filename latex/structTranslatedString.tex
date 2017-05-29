@@ -1,0 +1,45 @@
+\hypertarget{structTranslatedString}{}\section{Translated\+String Struct Reference}
+\label{structTranslatedString}\index{Translated\+String@{Translated\+String}}
+
+
+An internationalized message containing per-\/language versions of a snippet of text or a U\+RL.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTranslatedString_1_1Translation}{Translation}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+repeated \hyperlink{structTranslatedString_1_1Translation}{Translation} \hyperlink{structTranslatedString_adb872ed6cd74a2293f8f4f03f1366b07}{translation} = 1\hypertarget{structTranslatedString_adb872ed6cd74a2293f8f4f03f1366b07}{}\label{structTranslatedString_adb872ed6cd74a2293f8f4f03f1366b07}
+
+\begin{DoxyCompactList}\small\item\em At least one translation must be provided. \end{DoxyCompactList}\item 
+extensions \hyperlink{structTranslatedString_a79fd182a0215dcc9476e4af4cb8beef5}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An internationalized message containing per-\/language versions of a snippet of text or a U\+RL. 
+
+One of the strings from a message will be picked up. The resolution proceeds as follows\+:
+\begin{DoxyEnumerate}
+\item If the UI language matches the language code of a translation, the first matching translation is picked.
+\item If a default UI language (e.\+g., English) matches the language code of a translation, the first matching translation is picked.
+\item If some translation has an unspecified language code, that translation is picked. 
+\end{DoxyEnumerate}
+
+\subsection{Member Data Documentation}
+\index{Translated\+String@{Translated\+String}!to@{to}}
+\index{to@{to}!Translated\+String@{Translated\+String}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Translated\+String\+::to}\hypertarget{structTranslatedString_a79fd182a0215dcc9476e4af4cb8beef5}{}\label{structTranslatedString_a79fd182a0215dcc9476e4af4cb8beef5}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}

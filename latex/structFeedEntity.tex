@@ -1,0 +1,63 @@
+\hypertarget{structFeedEntity}{}\section{Feed\+Entity Struct Reference}
+\label{structFeedEntity}\index{Feed\+Entity@{Feed\+Entity}}
+
+
+A definition (or update) of an entity in the transit feed.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+required string \hyperlink{structFeedEntity_ad96aa1c86c0940151a63b55e75bd9197}{id} = 1
+\begin{DoxyCompactList}\small\item\em The ids are used only to provide incrementality support. \end{DoxyCompactList}\item 
+optional bool \hyperlink{structFeedEntity_aacce46cb6514b5ad2cf66559abdcfba3}{is\+\_\+deleted} = 2 \mbox{[}default = false\mbox{]}
+\begin{DoxyCompactList}\small\item\em Whether this entity is to be deleted. \end{DoxyCompactList}\item 
+optional \hyperlink{structTripUpdate}{Trip\+Update} \hyperlink{structFeedEntity_a0951149769058b1b3a93ef41a5faa96a}{trip\+\_\+update} = 3
+\begin{DoxyCompactList}\small\item\em Data about the entity itself. \end{DoxyCompactList}\item 
+optional \hyperlink{structVehiclePosition}{Vehicle\+Position} {\bfseries vehicle} = 4\hypertarget{structFeedEntity_af6527822a8363d699b6449ae199a9517}{}\label{structFeedEntity_af6527822a8363d699b6449ae199a9517}
+
+\item 
+optional \hyperlink{structAlert}{Alert} {\bfseries alert} = 5\hypertarget{structFeedEntity_a9bc8bedc0a343f5c9e56e9995c7da60a}{}\label{structFeedEntity_a9bc8bedc0a343f5c9e56e9995c7da60a}
+
+\item 
+extensions \hyperlink{structFeedEntity_a9fa773cfd301e2fa0ddb389df46d9bd4}{to}
+\begin{DoxyCompactList}\small\item\em The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A definition (or update) of an entity in the transit feed. 
+
+\subsection{Member Data Documentation}
+\index{Feed\+Entity@{Feed\+Entity}!id@{id}}
+\index{id@{id}!Feed\+Entity@{Feed\+Entity}}
+\subsubsection[{\texorpdfstring{id}{id}}]{\setlength{\rightskip}{0pt plus 5cm}required string Feed\+Entity\+::id = 1}\hypertarget{structFeedEntity_ad96aa1c86c0940151a63b55e75bd9197}{}\label{structFeedEntity_ad96aa1c86c0940151a63b55e75bd9197}
+
+
+The ids are used only to provide incrementality support. 
+
+The id should be unique within a \hyperlink{structFeedMessage}{Feed\+Message}. Consequent Feed\+Messages may contain Feed\+Entities with the same id. In case of a D\+I\+F\+F\+E\+R\+E\+N\+T\+I\+AL update the new \hyperlink{structFeedEntity}{Feed\+Entity} with some id will replace the old \hyperlink{structFeedEntity}{Feed\+Entity} with the same id (or delete it -\/ see is\+\_\+deleted below). The actual G\+T\+FS entities (e.\+g. stations, routes, trips) referenced by the feed must be specified by explicit selectors (see \hyperlink{structEntitySelector}{Entity\+Selector} below for more info). \index{Feed\+Entity@{Feed\+Entity}!is\+\_\+deleted@{is\+\_\+deleted}}
+\index{is\+\_\+deleted@{is\+\_\+deleted}!Feed\+Entity@{Feed\+Entity}}
+\subsubsection[{\texorpdfstring{is\+\_\+deleted}{is_deleted}}]{\setlength{\rightskip}{0pt plus 5cm}optional bool Feed\+Entity\+::is\+\_\+deleted = 2 \mbox{[}default = false\mbox{]}}\hypertarget{structFeedEntity_aacce46cb6514b5ad2cf66559abdcfba3}{}\label{structFeedEntity_aacce46cb6514b5ad2cf66559abdcfba3}
+
+
+Whether this entity is to be deleted. 
+
+Relevant only for incremental fetches. \index{Feed\+Entity@{Feed\+Entity}!to@{to}}
+\index{to@{to}!Feed\+Entity@{Feed\+Entity}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}extensions Feed\+Entity\+::to}\hypertarget{structFeedEntity_a9fa773cfd301e2fa0ddb389df46d9bd4}{}\label{structFeedEntity_a9fa773cfd301e2fa0ddb389df46d9bd4}
+
+
+The extensions namespace allows 3rd-\/party developers to extend the G\+T\+F\+S-\/realtime specification in order to add and evaluate new features and modifications to the spec. 
+
+\index{Feed\+Entity@{Feed\+Entity}!trip\+\_\+update@{trip\+\_\+update}}
+\index{trip\+\_\+update@{trip\+\_\+update}!Feed\+Entity@{Feed\+Entity}}
+\subsubsection[{\texorpdfstring{trip\+\_\+update}{trip_update}}]{\setlength{\rightskip}{0pt plus 5cm}optional {\bf Trip\+Update} Feed\+Entity\+::trip\+\_\+update = 3}\hypertarget{structFeedEntity_a0951149769058b1b3a93ef41a5faa96a}{}\label{structFeedEntity_a0951149769058b1b3a93ef41a5faa96a}
+
+
+Data about the entity itself. 
+
+Exactly one of the following fields must be present (unless the entity is being deleted). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gtfs-\/realtime.\+proto\end{DoxyCompactItemize}
