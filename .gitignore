@@ -1,2 +1,4 @@
 proto2cpp.py
 doxygen-bootstrapped-master/
+refman.*
+!refman.pdf
