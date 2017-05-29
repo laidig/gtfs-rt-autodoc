@@ -1,0 +1,45 @@
+\hypertarget{structNyctStopTimeUpdate}{}\section{Nyct\+Stop\+Time\+Update Struct Reference}
+\label{structNyctStopTimeUpdate}\index{Nyct\+Stop\+Time\+Update@{Nyct\+Stop\+Time\+Update}}
+
+
+N\+Y\+CT Subway extensions for the stop time update.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+optional string \hyperlink{structNyctStopTimeUpdate_a07cd8f81941772b2b04bc848ac8c971b}{scheduled\+\_\+track} = 1
+\begin{DoxyCompactList}\small\item\em Provides the planned station arrival track. \end{DoxyCompactList}\item 
+optional string \hyperlink{structNyctStopTimeUpdate_a8a8b2d180245ec20f2565edb39b094e0}{actual\+\_\+track} = 2
+\begin{DoxyCompactList}\small\item\em This is the actual track that the train is operating on and can be used to determine if a train is operating according to its current schedule (plan). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+Y\+CT Subway extensions for the stop time update. 
+
+\subsection{Member Data Documentation}
+\index{Nyct\+Stop\+Time\+Update@{Nyct\+Stop\+Time\+Update}!actual\+\_\+track@{actual\+\_\+track}}
+\index{actual\+\_\+track@{actual\+\_\+track}!Nyct\+Stop\+Time\+Update@{Nyct\+Stop\+Time\+Update}}
+\subsubsection[{\texorpdfstring{actual\+\_\+track}{actual_track}}]{\setlength{\rightskip}{0pt plus 5cm}optional string Nyct\+Stop\+Time\+Update\+::actual\+\_\+track = 2}\hypertarget{structNyctStopTimeUpdate_a8a8b2d180245ec20f2565edb39b094e0}{}\label{structNyctStopTimeUpdate_a8a8b2d180245ec20f2565edb39b094e0}
+
+
+This is the actual track that the train is operating on and can be used to determine if a train is operating according to its current schedule (plan). 
+
+The actual track is known only shortly before the train reaches a station, typically not before it leaves the previous station. Therefore, the N\+Y\+CT feed sets this field only for the first station of the remaining trip.
+
+Different actual and scheduled track is the result of manually rerouting a train off it scheduled path. When this occurs, prediction data may become unreliable since the train is no longer operating in accordance to its schedule. The rules engine for the \textquotesingle{}countdown\textquotesingle{} clocks will remove this train from all schedule stations. \index{Nyct\+Stop\+Time\+Update@{Nyct\+Stop\+Time\+Update}!scheduled\+\_\+track@{scheduled\+\_\+track}}
+\index{scheduled\+\_\+track@{scheduled\+\_\+track}!Nyct\+Stop\+Time\+Update@{Nyct\+Stop\+Time\+Update}}
+\subsubsection[{\texorpdfstring{scheduled\+\_\+track}{scheduled_track}}]{\setlength{\rightskip}{0pt plus 5cm}optional string Nyct\+Stop\+Time\+Update\+::scheduled\+\_\+track = 1}\hypertarget{structNyctStopTimeUpdate_a07cd8f81941772b2b04bc848ac8c971b}{}\label{structNyctStopTimeUpdate_a07cd8f81941772b2b04bc848ac8c971b}
+
+
+Provides the planned station arrival track. 
+
+The following is the Manhattan track configurations\+: 1\+: southbound local 2\+: southbound express 3\+: northbound express 4\+: northbound local
+
+In the Bronx (except Dyre Ave line) M\+: bi-\/directional express (in the AM express to Manhattan, in the PM express away).
+
+The Dyre Ave line is configured\+: 1\+: southbound 2\+: northbound 3\+: bi-\/directional 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nyct-\/subway.\+proto\end{DoxyCompactItemize}

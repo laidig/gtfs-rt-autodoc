@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['scheduled',['SCHEDULED',['../structTripUpdate_1_1StopTimeUpdate.html#a624ef1349bfc24a44984c33761070726ad2bf6182562045f8d4494f2b90979475',1,'TripUpdate::StopTimeUpdate::SCHEDULED()'],['../structTripDescriptor.html#a3edbca669de2c1c3350403537b24a26eabb46adf5d175229c9233128f5c91cc9a',1,'TripDescriptor::SCHEDULED()']]],
+  ['scheduled_5ftrack',['scheduled_track',['../structOVapiStopTimeUpdate.html#ad0c47f6abfd9feac16d9b6113d4cb760',1,'OVapiStopTimeUpdate::scheduled_track()'],['../structNyctStopTimeUpdate.html#a07cd8f81941772b2b04bc848ac8c971b',1,'NyctStopTimeUpdate::scheduled_track()']]],
+  ['schedulerelationship',['ScheduleRelationship',['../structTripUpdate_1_1StopTimeUpdate.html#a624ef1349bfc24a44984c33761070726',1,'TripUpdate::StopTimeUpdate::ScheduleRelationship()'],['../structTripDescriptor.html#a3edbca669de2c1c3350403537b24a26e',1,'TripDescriptor::ScheduleRelationship()']]],
+  ['severe_5fcongestion',['SEVERE_CONGESTION',['../structVehiclePosition.html#a6b68a02175508df528c0fb3dfc52c7c5a7a9272ea707c92007d42b72957d8d570',1,'VehiclePosition']]],
+  ['significant_5fdelays',['SIGNIFICANT_DELAYS',['../structAlert.html#a4378fb5cc59d723ec02ea80694678d98a4b00b4d3a9ad0ee08c9756933a985d50',1,'Alert']]],
+  ['skipped',['SKIPPED',['../structTripUpdate_1_1StopTimeUpdate.html#a624ef1349bfc24a44984c33761070726a7b42e54cedaee1689c090fddce6ffe3e',1,'TripUpdate::StopTimeUpdate']]],
+  ['speed',['speed',['../structPosition.html#a7a7d9503a9f3cd15b28d4ee638770896',1,'Position']]],
+  ['standing_5froom_5fonly',['STANDING_ROOM_ONLY',['../structVehiclePosition.html#a3b7e3ee1e916599ecb7fd088d4f53f0da16f9e21186d7119e1b79087143b24423',1,'VehiclePosition']]],
+  ['start',['start',['../structTimeRange.html#a58a6afe3f10babe6dcbaf203fb83c26c',1,'TimeRange']]],
+  ['start_5fdate',['start_date',['../structTripDescriptor.html#a24d4363686da053b0eadbf04313a5055',1,'TripDescriptor']]],
+  ['start_5ftime',['start_time',['../structTripDescriptor.html#a799660dd75143d643c5552ac945fe16e',1,'TripDescriptor']]],
+  ['station_5fid',['station_id',['../structOVapiStopTimeUpdate.html#a1b321e52c439cb12cc3898e6012e53b0',1,'OVapiStopTimeUpdate']]],
+  ['stop_5fheadsign',['stop_headsign',['../structOVapiStopTimeUpdate.html#af56f2bfaef6f7f4718ab363d931c91a1',1,'OVapiStopTimeUpdate']]],
+  ['stop_5fid',['stop_id',['../structTripUpdate_1_1StopTimeUpdate.html#a2e9f0d502733a40600e161ecc5ccb341',1,'TripUpdate::StopTimeUpdate::stop_id()'],['../structVehiclePosition.html#a4b7ba68aab943efc93017657f40867f9',1,'VehiclePosition::stop_id()']]],
+  ['stop_5fsequence',['stop_sequence',['../structTripUpdate_1_1StopTimeUpdate.html#a0d9f654ecd536657ee00b1c1cbe428aa',1,'TripUpdate::StopTimeUpdate']]],
+  ['stop_5ftime_5fupdate',['stop_time_update',['../structTripUpdate.html#a2bfd408c9bcb02945e07162f91cf012f',1,'TripUpdate']]],
+  ['stopped_5fat',['STOPPED_AT',['../structVehiclePosition.html#a59db950a979338c8c299fdd5b8383c6ea665c375499f4e9c38be06ba86c3840ea',1,'VehiclePosition']]],
+  ['stoptimeevent',['StopTimeEvent',['../structTripUpdate_1_1StopTimeEvent.html',1,'TripUpdate']]],
+  ['stoptimeupdate',['StopTimeUpdate',['../structTripUpdate_1_1StopTimeUpdate.html',1,'TripUpdate']]],
+  ['strike',['STRIKE',['../structAlert.html#a199c4ca00d947ef89a8523c495ad2d2facf63f18c599508648e1b6e026d024914',1,'Alert']]]
+];

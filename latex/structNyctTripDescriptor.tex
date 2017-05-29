@@ -1,0 +1,75 @@
+\hypertarget{structNyctTripDescriptor}{}\section{Nyct\+Trip\+Descriptor Struct Reference}
+\label{structNyctTripDescriptor}\index{Nyct\+Trip\+Descriptor@{Nyct\+Trip\+Descriptor}}
+
+
+N\+Y\+CT Subway extensions for the trip descriptor.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structNyctTripDescriptor_a44bbbcd4762dfa1f89093b52ec7725a4}{Direction} \{ {\bfseries N\+O\+R\+TH} = 1, 
+{\bfseries E\+A\+ST} = 2, 
+{\bfseries S\+O\+U\+TH} = 3, 
+{\bfseries W\+E\+ST} = 4
+ \}\hypertarget{structNyctTripDescriptor_a44bbbcd4762dfa1f89093b52ec7725a4}{}\label{structNyctTripDescriptor_a44bbbcd4762dfa1f89093b52ec7725a4}
+\begin{DoxyCompactList}\small\item\em The direction the train is moving. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+optional string \hyperlink{structNyctTripDescriptor_a03a9908ba609b45afe28699e06dc01fb}{train\+\_\+id} = 1
+\begin{DoxyCompactList}\small\item\em The nyct\+\_\+train\+\_\+id is meant for internal use only. \end{DoxyCompactList}\item 
+optional bool \hyperlink{structNyctTripDescriptor_aeb67c25d340de4442fe41d5cfe4b6005}{is\+\_\+assigned} = 2
+\begin{DoxyCompactList}\small\item\em This trip has been assigned to a physical train. \end{DoxyCompactList}\item 
+optional \hyperlink{structNyctTripDescriptor_a44bbbcd4762dfa1f89093b52ec7725a4}{Direction} \hyperlink{structNyctTripDescriptor_a0803947324a7c58b27475e1f57fbbb46}{direction} = 3
+\begin{DoxyCompactList}\small\item\em Uptown and Bronx-\/bound trains are moving N\+O\+R\+TH. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+Y\+CT Subway extensions for the trip descriptor. 
+
+\subsection{Member Data Documentation}
+\index{Nyct\+Trip\+Descriptor@{Nyct\+Trip\+Descriptor}!direction@{direction}}
+\index{direction@{direction}!Nyct\+Trip\+Descriptor@{Nyct\+Trip\+Descriptor}}
+\subsubsection[{\texorpdfstring{direction}{direction}}]{\setlength{\rightskip}{0pt plus 5cm}optional {\bf Direction} Nyct\+Trip\+Descriptor\+::direction = 3}\hypertarget{structNyctTripDescriptor_a0803947324a7c58b27475e1f57fbbb46}{}\label{structNyctTripDescriptor_a0803947324a7c58b27475e1f57fbbb46}
+
+
+Uptown and Bronx-\/bound trains are moving N\+O\+R\+TH. 
+
+Times Square Shuttle to Grand Central is also northbound.
+
+Downtown and Brooklyn-\/bound trains are moving S\+O\+U\+TH. Times Square Shuttle to Times Square is also southbound.
+
+E\+A\+ST and W\+E\+ST are not used currently. \index{Nyct\+Trip\+Descriptor@{Nyct\+Trip\+Descriptor}!is\+\_\+assigned@{is\+\_\+assigned}}
+\index{is\+\_\+assigned@{is\+\_\+assigned}!Nyct\+Trip\+Descriptor@{Nyct\+Trip\+Descriptor}}
+\subsubsection[{\texorpdfstring{is\+\_\+assigned}{is_assigned}}]{\setlength{\rightskip}{0pt plus 5cm}optional bool Nyct\+Trip\+Descriptor\+::is\+\_\+assigned = 2}\hypertarget{structNyctTripDescriptor_aeb67c25d340de4442fe41d5cfe4b6005}{}\label{structNyctTripDescriptor_aeb67c25d340de4442fe41d5cfe4b6005}
+
+
+This trip has been assigned to a physical train. 
+
+If true, this trip is already underway or most likely will depart shortly.
+
+Train Assignment is a function of the Automatic Train Supervision (A\+TS) office system used by N\+Y\+CT Rail Operations to monitor and track train movements. A\+TS provides the ability to \char`\"{}assign\char`\"{} the nyct\+\_\+train\+\_\+id attribute when a physical train is at its origin terminal. These assigned trips have the is\+\_\+assigned field set in the \hyperlink{structTripDescriptor}{Trip\+Descriptor}.
+
+When a train is at a terminal but has not been given a work program it is declared unassigned and is tagged as such. Unassigned trains can be moved to a storage location or assigned a nyct\+\_\+train\+\_\+id when a determination for service is made. \index{Nyct\+Trip\+Descriptor@{Nyct\+Trip\+Descriptor}!train\+\_\+id@{train\+\_\+id}}
+\index{train\+\_\+id@{train\+\_\+id}!Nyct\+Trip\+Descriptor@{Nyct\+Trip\+Descriptor}}
+\subsubsection[{\texorpdfstring{train\+\_\+id}{train_id}}]{\setlength{\rightskip}{0pt plus 5cm}optional string Nyct\+Trip\+Descriptor\+::train\+\_\+id = 1}\hypertarget{structNyctTripDescriptor_a03a9908ba609b45afe28699e06dc01fb}{}\label{structNyctTripDescriptor_a03a9908ba609b45afe28699e06dc01fb}
+
+
+The nyct\+\_\+train\+\_\+id is meant for internal use only. 
+
+It provides an easy way to associated G\+T\+F\+S-\/realtime trip identifiers with N\+Y\+CT rail operations identifier
+
+The A\+TS office system assigns unique train identification (Train ID) to each train operating within or ready to enter the mainline of the monitored territory. An example of this is 06 0123+ P\+E\+L/\+B\+BR and is decoded as follows\+:
+
+The first character represents the trip type designator. 0 identifies a scheduled revenue trip. Other revenue trip values that are a result of a change to the base schedule include; \mbox{[}= reroute\mbox{]}, \mbox{[}/ skip stop\mbox{]}, \mbox{[}\$ turn train\mbox{]} also known as shortly lined service.
+
+The second character 6 represents the trip line i.\+e. number 6 train The third set of characters identify the decoded origin time. The last character may be blank \char`\"{}on the whole minute\char`\"{} or + \char`\"{}30 seconds\char`\"{}
+
+Note\+: Origin times will not change when there is a trip type change. This is followed by a three character \char`\"{}\+Origin Location\char`\"{} / \char`\"{}\+Destination
+\+Location\char`\"{} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nyct-\/subway.\+proto\end{DoxyCompactItemize}

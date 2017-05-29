@@ -1,0 +1,33 @@
+\hypertarget{structNyctFeedHeader}{}\section{Nyct\+Feed\+Header Struct Reference}
+\label{structNyctFeedHeader}\index{Nyct\+Feed\+Header@{Nyct\+Feed\+Header}}
+
+
+N\+Y\+CT Subway extensions for the feed header.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+required string \hyperlink{structNyctFeedHeader_a0e0e7f217e725adff3bfcb697db15fe8}{nyct\+\_\+subway\+\_\+version} = 1\hypertarget{structNyctFeedHeader_a0e0e7f217e725adff3bfcb697db15fe8}{}\label{structNyctFeedHeader_a0e0e7f217e725adff3bfcb697db15fe8}
+
+\begin{DoxyCompactList}\small\item\em Version of the N\+Y\+CT Subway extensions The current version is 1.\+0. \end{DoxyCompactList}\item 
+repeated \hyperlink{structTripReplacementPeriod}{Trip\+Replacement\+Period} \hyperlink{structNyctFeedHeader_a941bcc94efc50c96134a7702185bd509}{trip\+\_\+replacement\+\_\+period} = 2
+\begin{DoxyCompactList}\small\item\em For the N\+Y\+CT Subway, the G\+T\+F\+S-\/realtime feed replaces any scheduled trip within the trip\+\_\+replacement\+\_\+period. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+Y\+CT Subway extensions for the feed header. 
+
+\subsection{Member Data Documentation}
+\index{Nyct\+Feed\+Header@{Nyct\+Feed\+Header}!trip\+\_\+replacement\+\_\+period@{trip\+\_\+replacement\+\_\+period}}
+\index{trip\+\_\+replacement\+\_\+period@{trip\+\_\+replacement\+\_\+period}!Nyct\+Feed\+Header@{Nyct\+Feed\+Header}}
+\subsubsection[{\texorpdfstring{trip\+\_\+replacement\+\_\+period}{trip_replacement_period}}]{\setlength{\rightskip}{0pt plus 5cm}repeated {\bf Trip\+Replacement\+Period} Nyct\+Feed\+Header\+::trip\+\_\+replacement\+\_\+period = 2}\hypertarget{structNyctFeedHeader_a941bcc94efc50c96134a7702185bd509}{}\label{structNyctFeedHeader_a941bcc94efc50c96134a7702185bd509}
+
+
+For the N\+Y\+CT Subway, the G\+T\+F\+S-\/realtime feed replaces any scheduled trip within the trip\+\_\+replacement\+\_\+period. 
+
+This feed is a full dataset, it contains all trips starting in the trip\+\_\+replacement\+\_\+period. If a trip from the static G\+T\+FS is not found in the G\+T\+F\+S-\/realtime feed, it should be considered as cancelled. The replacement period can be different for each route, so here is a list of the routes where the trips in the feed replace all scheduled trips within the replacement period. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nyct-\/subway.\+proto\end{DoxyCompactItemize}
